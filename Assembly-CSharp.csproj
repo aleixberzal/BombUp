@@ -65,6 +65,9 @@
     <Compile Include="Assets\ForceController.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Pixel Adventure 1\ProjectSettings\ProjectVersion.txt" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.3f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
