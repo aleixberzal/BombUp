@@ -7,12 +7,14 @@ public class MenuPausa : MonoBehaviour
 {
 
     public GameObject PausaMenu;
+    public GameObject ConfiguracionMenu;
     private bool isPaused = false;
 
 
     void Start()
     {
         PausaMenu.SetActive(false);
+        ConfiguracionMenu.SetActive(false);
     }
 
     // Update is called once per frame
@@ -50,6 +52,17 @@ public class MenuPausa : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    public void Configuracion()
+    {
+        PausaMenu.SetActive(false);
+        ConfiguracionMenu.SetActive(true);
+    }
+
+    public void OcultarOtroMenu()
+    {
+        ConfiguracionMenu.SetActive(false);
+        PausaMenu.SetActive(true);
+    }
     public void Salir()
     {
         Time.timeScale = 1f;
