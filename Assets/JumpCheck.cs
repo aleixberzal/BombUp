@@ -36,7 +36,8 @@ private void Update()
 
         }
     }
-
+    
+    /*:/*/
     private void Saltar()
     {
         // Aplicamos una fuerza instantánea hacia arriba en el Rigidbody2D
