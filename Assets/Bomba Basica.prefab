@@ -16,7 +16,11 @@ GameObject:
   - component: {fileID: 2074160782057196779}
   m_Layer: 3
   m_Name: Bomba Basica
+<<<<<<< HEAD
   m_TagString: Bomba
+=======
+  m_TagString: Untagged
+>>>>>>> Victor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -16,10 +16,14 @@ public class ColocarBomba : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))  // Cuando se presiona Espacio
         {
+<<<<<<< HEAD
             if (GameObject.FindGameObjectWithTag("Bomba") == null)
             {
                 ColocarBombaEnPosicion();  // Coloca la bomba
             }
+=======
+            ColocarBombaEnPosicion();  // Coloca la bomba
+>>>>>>> Victor
         }
     }
 

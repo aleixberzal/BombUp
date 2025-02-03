@@ -47,6 +47,7 @@ private void Update()
     }
 
     // Detecta si el jugador está tocando el suelo (con el Collider2D)
+
     private void OnCollisionEnter2D(Collision2D col)
     {
         // Verificamos si el jugador toca un objeto con la etiqueta 
@@ -59,6 +60,23 @@ private void Update()
             movimiento.movementSpeed = velocidadOriginal;
         }
     }
+    // Posible solucion al error del walljump
+    /* private void OnCollisionStay2D(Collision2D col)
+    {
+    // Comprobamos si sigue tocando el suelo
+    if (col.gameObject.CompareTag("Suelo"))
+    {
+        foreach (ContactPoint2D contacto in col.contacts)
+        {
+            if (contacto.normal.y > 0.5f) // Si la normal indica suelo
+            {
+                enSuelo = true;
+                movimiento.movementSpeed = velocidadOriginal;
+                return;
+            }
+        }
+    } 
+    } */
 
     private void OnCollisionExit2D(Collision2D col)
     {
