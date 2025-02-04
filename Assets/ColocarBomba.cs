@@ -24,7 +24,7 @@ public class ColocarBomba : MonoBehaviour
         {
             direccionBomba = new Vector2(moveX, moveY).normalized;
         }
-        if (Input.GetKeyDown(KeyCode.J))  // Cuando se presiona la j
+        if (Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.Z))  // Cuando se presiona la j o la z para controles alternativos
         {
 
             if (GameObject.FindGameObjectWithTag("Bomba") == null)
