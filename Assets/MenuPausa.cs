@@ -13,7 +13,7 @@ public class MenuPausa : MonoBehaviour
 
     void Start()
     {
-        PausaMenu.SetActive(false);
+        PausaMenu.SetActive(true);
         ConfiguracionMenu.SetActive(false);
     }
 
