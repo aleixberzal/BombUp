@@ -5,7 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Suelo
-  - Bomba
+  - Bomba1
+  - Bomba2
   layers:
   - Default
   - TransparentFX

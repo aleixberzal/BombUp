@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{2980C836-C07A-4BE7-C5B2-69962B07E236}</ProjectGuid>
+    <ProjectGuid>{E6F78B53-70D3-C9F1-5DCA-39F41024F20B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\TestBomba.cs" />
+    <Compile Include="Assets\BombaExplosion1.cs" />
     <Compile Include="Assets\Camara.cs" />
     <Compile Include="Assets\camaraLenta.cs" />
     <Compile Include="Assets\Explosiones.cs" />
@@ -67,6 +68,7 @@
     <Compile Include="Assets\JumpCheck.cs" />
     <Compile Include="Assets\MenuPausa.cs" />
     <Compile Include="Assets\ColocarBomba.cs" />
+    <Compile Include="Assets\BombaPegajosa.cs" />
     <Compile Include="Assets\ForceController.cs" />
   </ItemGroup>
   <ItemGroup>

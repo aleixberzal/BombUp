@@ -6586,7 +6586,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd8972b8b80e9dd429bea378ccfc64ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bombaPrefab: {fileID: 7450099582326764800, guid: 87fe70d2b5574d34f88f3cb88afb0675, type: 3}
+  bombaPrefab1: {fileID: 7450099582326764800, guid: 87fe70d2b5574d34f88f3cb88afb0675, type: 3}
+  bombaPrefab2: {fileID: 7450099582326764800, guid: 9c1b9c45b4ecb3a4fa8895eaa471622b, type: 3}
   firePoint: {fileID: 1197010409}
   velocidadBomba: 6
 --- !u!114 &1197010414
