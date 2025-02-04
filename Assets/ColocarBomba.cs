@@ -21,8 +21,6 @@ public class ColocarBomba : MonoBehaviour
             {
                 ColocarBombaEnPosicion();  // Coloca la bomba
             }
-
-            ColocarBombaEnPosicion();  // Coloca la bomba
         }
     }
 

@@ -16,11 +16,7 @@ GameObject:
   - component: {fileID: 2074160782057196779}
   m_Layer: 3
   m_Name: Bomba Basica
-<<<<<<< HEAD
   m_TagString: Bomba
-=======
-  m_TagString: Untagged
->>>>>>> Victor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -192,8 +188,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eefdf8cfb601ce48b1ac555e4354797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3
-  force: 8
+  radius: 4
+  force: 6
   contactFilter:
     useTriggers: 0
     useLayerMask: 0
