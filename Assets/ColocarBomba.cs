@@ -5,27 +5,46 @@ using UnityEngine;
 public class ColocarBomba : MonoBehaviour
 {
     public GameObject bombaPrefab;  // Arrastra aquí el Prefab "Bomba basica"
-    public Transform posicionBomba; // Posición donde se colocará la bomba
+    public Transform firePoint; // direccion donde dispara
+    public float velocidadBomba = 10f;
+
+    private Vector2 direccionBomba = Vector2.right;
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))  // Cuando se presiona Espacio
+        float moveX = Input.GetAxisRaw("Horizontal");
+        float moveY = Input.GetAxisRaw("Vertical");
+
+        if (moveX != 0 || moveY != 0)
+        {
+            direccionBomba = new Vector2(moveX, moveY).normalized;
+        }
+        if (Input.GetKeyDown(KeyCode.J))  // Cuando se presiona la j
         {
 
             if (GameObject.FindGameObjectWithTag("Bomba") == null)
             {
-                ColocarBombaEnPosicion();  // Coloca la bomba
+                LanzarBomba();  // Coloca la bomba
             }
         }
     }
 
-    void ColocarBombaEnPosicion()
+    void LanzarBomba()
     {
-        Instantiate(bombaPrefab, posicionBomba.position, Quaternion.identity);  // Instancia la bomba
+        GameObject bomba1 = Instantiate(bombaPrefab, firePoint.position, Quaternion.identity);  // Instancia la bomba
+
+        // Aplicar velocidad al proyectil
+        Rigidbody2D rb = bomba1.GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.velocity = direccionBomba * velocidadBomba;
+        }
+        bomba1.transform.right = direccionBomba;
+
     }
 }

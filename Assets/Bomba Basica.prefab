@@ -185,11 +185,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7450099582326764800}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0eefdf8cfb601ce48b1ac555e4354797, type: 3}
+  m_Script: {fileID: 11500000, guid: 65ea139fb0beea249b861250e6524890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 4
-  force: 6
+  radius: 10
+  force: 100
   contactFilter:
     useTriggers: 0
     useLayerMask: 0
