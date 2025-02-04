@@ -188,8 +188,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65ea139fb0beea249b861250e6524890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 10
-  force: 100
+  radius: 6
+  force: 5
   contactFilter:
     useTriggers: 0
     useLayerMask: 0
