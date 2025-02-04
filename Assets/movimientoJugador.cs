@@ -42,8 +42,8 @@ public class movimientoJugador : MonoBehaviour
         {
             /*En caso de no detectar ningún movimiento horizontal frenamos
              (porque al estar usando fuerzas y no velocidad el inpulso continuaría...)*/
-
             DetenerMovimiento();
+            
         }
 
         if (usarSuavizado && movimientoHorizontal == 0)
@@ -92,7 +92,7 @@ public class movimientoJugador : MonoBehaviour
     private void DetenerMovimiento()
     {
         /*Le decimos que la velocidad de nuestro personaje horizonalmente sea 0*/
-        rb2D.velocity = new Vector2(0, rb2D.velocity.y);
+        rb2D.velocity = new Vector2(rb2D.velocity.x, rb2D.velocity.y);
     }
 
     private void Girar()
