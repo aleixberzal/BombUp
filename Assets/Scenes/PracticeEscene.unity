@@ -5742,7 +5742,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1197010405}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94fd0f15442ff67428ca76d748b9ab8c, type: 3}
+  m_Script: {fileID: 11500000, guid: b92d41ca128ffef44acb3eb78f7af6f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 5
@@ -5788,4 +5788,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bombaPrefab: {fileID: 7450099582326764800, guid: 87fe70d2b5574d34f88f3cb88afb0675, type: 3}
-  posicionBomba: {fileID: 1197010409}
+  firePoint: {fileID: 1197010409}
+  velocidadBomba: 6
