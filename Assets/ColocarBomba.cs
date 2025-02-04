@@ -8,7 +8,7 @@ public class ColocarBomba : MonoBehaviour
     public Transform posicionBomba; // Posición donde se colocará la bomba
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -21,8 +21,8 @@ public class ColocarBomba : MonoBehaviour
             {
                 ColocarBombaEnPosicion();  // Coloca la bomba
             }
-            ColocarBombaEnPosicion();  // Coloca la bomba
 
+            ColocarBombaEnPosicion();  // Coloca la bomba
         }
     }
 
