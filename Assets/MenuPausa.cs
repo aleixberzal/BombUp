@@ -9,11 +9,12 @@ public class MenuPausa : MonoBehaviour
     public GameObject PausaMenu;
     public GameObject ConfiguracionMenu;
     private bool isPaused = false;
+    private bool configuracion = false;
 
 
     void Start()
     {
-        PausaMenu.SetActive(true);
+        PausaMenu.SetActive(false);
         ConfiguracionMenu.SetActive(false);
     }
 
@@ -25,6 +26,10 @@ public class MenuPausa : MonoBehaviour
             if (isPaused)
             {
                 Resumen();
+            }
+            else if (configuracion)
+            {
+                OcultarOtroMenu();
             }
             else
             {
@@ -56,12 +61,14 @@ public class MenuPausa : MonoBehaviour
     {
         PausaMenu.SetActive(false);
         ConfiguracionMenu.SetActive(true);
+        configuracion = true;
     }
 
     public void OcultarOtroMenu()
     {
         ConfiguracionMenu.SetActive(false);
         PausaMenu.SetActive(true);
+        configuracion = false;
     }
     public void Salir()
     {
