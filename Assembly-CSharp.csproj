@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Assets\TestBomba.cs" />
     <Compile Include="Assets\Camara.cs" />
+    <Compile Include="Assets\camaraLenta.cs" />
     <Compile Include="Assets\Explosiones.cs" />
     <Compile Include="Assets\MenuPrincipal.cs" />
     <Compile Include="Assets\movimientoJugador.cs" />

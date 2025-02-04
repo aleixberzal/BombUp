@@ -32,7 +32,7 @@ public class MenuPausa : MonoBehaviour
             }
         }
     }
-    void Pausa()
+    public void Pausa()
     {
         PausaMenu.SetActive(true);
         Time.timeScale = 0f;
