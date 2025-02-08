@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class SaltoJugador : MonoBehaviour
 {
     private Rigidbody2D rb2D;
@@ -14,77 +13,40 @@ public class SaltoJugador : MonoBehaviour
     private movimientoJugador movimiento;
     public float reduccion_Salto = 3f;
     private float velocidadOriginal;
+
+    [Header("Detección de suelo")]
+    public Transform groundCheckLeft;  // Punt esquerre
+    public Transform groundCheckRight; // Punt dret
+    public float groundCheckRadius = 0.2f; // Empty Object als peus del jugador
+    public LayerMask groundLayer; // Només la capa del terra
+
     private void Start()
     {
         movimiento = GetComponent<movimientoJugador>();
         rb2D = GetComponent<Rigidbody2D>();
         velocidadOriginal = movimiento.movementSpeed;
+    }
 
-}
-
-private void Update()
+    private void Update()
     {
-        // Detecta el input del jugador, solo si está en el suelo
+        // Raycast per detectar si està tocant el terra
+        enSuelo = Physics2D.Raycast(groundCheckLeft.position, Vector2.down, groundCheckRadius, groundLayer) ||
+              Physics2D.Raycast(groundCheckRight.position, Vector2.down, groundCheckRadius, groundLayer);
+
+
+        // Detecta el input del jugador, només si està en el terra
         if (Input.GetButtonDown("Jump") && enSuelo)
         {
             Saltar();
 
-            /*Para que cuando esté en el aire no tenga la libertad de moverse horizontalmente como quiera*/
-
+            // Redueix la velocitat mentre està a l'aire
             movimiento.movementSpeed /= reduccion_Salto;
-
-
         }
     }
-    
-    /*:/*/
+
     private void Saltar()
     {
-        // Aplicamos una fuerza instantánea hacia arriba en el Rigidbody2D
-
-        rb2D.AddForce(Vector2.up * fuerzaDeSalto, ForceMode2D.Impulse);
-
-        
-    }
-
-    // Detecta si el jugador está tocando el suelo (con el Collider2D)
-
-    private void OnCollisionEnter2D(Collision2D col)
-    {
-        // Verificamos si el jugador toca un objeto con la etiqueta 
-        if (col.gameObject.CompareTag("Suelo"))
-        {
-            enSuelo = true;
-
-            /*Tenemos que restaurar la velocidad después de cada salto, una vez toque el suelo*/
-
-            movimiento.movementSpeed = velocidadOriginal;
-        }
-    }
-    // Posible solucion al error del walljump
-    /* private void OnCollisionStay2D(Collision2D col)
-    {
-    // Comprobamos si sigue tocando el suelo
-    if (col.gameObject.CompareTag("Suelo"))
-    {
-        foreach (ContactPoint2D contacto in col.contacts)
-        {
-            if (contacto.normal.y > 0.5f) // Si la normal indica suelo
-            {
-                enSuelo = true;
-                movimiento.movementSpeed = velocidadOriginal;
-                return;
-            }
-        }
-    } 
-    } */
-
-    private void OnCollisionExit2D(Collision2D col)
-    {
-        // Cuando el jugador deje de tocar el suelo, ya no podrá saltar
-        if (col.gameObject.CompareTag("Suelo"))
-        {
-            enSuelo = false;
-        }
+        // Aplicar una força instantània cap amunt
+        rb2D.velocity = new Vector2(rb2D.velocity.x, fuerzaDeSalto);
     }
 }

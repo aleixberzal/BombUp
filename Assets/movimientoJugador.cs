@@ -88,12 +88,7 @@ public class movimientoJugador : MonoBehaviour
     private void DetenerMovimiento()
     {
         /*Le decimos que la velocidad de nuestro personaje horizonalmente sea 0*/
-<<<<<<< HEAD
-        rb2D.velocity = new Vector2(rb2D.velocity.x, rb2D.velocity.y);
-=======
-
         rb2D.velocity = new Vector2(rb2D.velocity.x * 0.9f, rb2D.velocity.y); // Reduce velocidad gradualmente
->>>>>>> main
     }
 
     private void Girar()
