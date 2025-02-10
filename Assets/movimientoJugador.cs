@@ -42,8 +42,8 @@ public class movimientoJugador : MonoBehaviour
         {
             /*En caso de no detectar ningún movimiento horizontal frenamos
              (porque al estar usando fuerzas y no velocidad el inpulso continuaría...)*/
-
             DetenerMovimiento();
+            
         }
 
         if (usarSuavizado && movimientoHorizontal == 0)
@@ -55,20 +55,16 @@ public class movimientoJugador : MonoBehaviour
 
     private void AplicarFuerzaMovimiento(float direccion)
     {
-        /*Variables para calcular el inpulso horizontal, y la velocidad a la que queremos ir desde un primer momento*/
+
         float velocidadActual = rb2D.velocity.x;
         float velocidadDeseada = direccion * movementSpeed;
-
-        /*Tenemos que aplicar la diferencia de velocidad para que se mueva a la misma velocidad de manera constante. 
-         Porque al estar usando fuerzas, como la aplicamos continuamente, el jugador cada vez se iría moviendo más rápido.*/
-
         float diferenciaVelocidad = velocidadDeseada - velocidadActual;
 
-        
         Vector2 fuerza = new Vector2(diferenciaVelocidad * fuerzaControl, 0);
-        rb2D.AddForce(fuerza);
+        rb2D.AddForce(fuerza, ForceMode2D.Force); // Mantén ForceMode2D.Force para control preciso
 
-        
+
+
         if (direccion > 0 && !mirandoDerecha)
         {
             Girar();
@@ -92,7 +88,7 @@ public class movimientoJugador : MonoBehaviour
     private void DetenerMovimiento()
     {
         /*Le decimos que la velocidad de nuestro personaje horizonalmente sea 0*/
-        rb2D.velocity = new Vector2(0, rb2D.velocity.y);
+        rb2D.velocity = new Vector2(rb2D.velocity.x * 0.9f, rb2D.velocity.y); // Reduce velocidad gradualmente
     }
 
     private void Girar()
