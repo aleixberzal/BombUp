@@ -5,13 +5,15 @@ using UnityEngine;
 
 public class movimientoJugador : MonoBehaviour
 {
+    [SerializeField] private RaycastSuelo raycast;
     private Rigidbody2D rb2D;
 
     [Header("Movimiento")]
     private float movimientoHorizontal = 0f;
     /*Creamos las variables públicas para ir comprobando le movimiento en tiempo real*/
     [SerializeField] public float movementSpeed = 10f; 
-    [SerializeField] public float fuerzaControl = 50f; 
+    [SerializeField] public float fuerzaControl = 30f;
+    [SerializeField] public float fuerzaAire = 2f;
     [SerializeField] public bool usarSuavizado = true; 
     /*No funciona ahora mismo, pero es una barra para ajustar la aceleración y desaceleración*/
     [Range(0f, 1f)][SerializeField] public float smoothingFactor = 0.9f; 
@@ -49,7 +51,7 @@ public class movimientoJugador : MonoBehaviour
         if (usarSuavizado && movimientoHorizontal == 0)
         {
             /*No funcional*/
-            AplicarSuavizado();
+            //AplicarSuavizado();
         }
     }
 
@@ -59,8 +61,14 @@ public class movimientoJugador : MonoBehaviour
         float velocidadActual = rb2D.velocity.x;
         float velocidadDeseada = direccion * movementSpeed;
         float diferenciaVelocidad = velocidadDeseada - velocidadActual;
-
-        Vector2 fuerza = new Vector2(diferenciaVelocidad * fuerzaControl, 0);
+        Vector2 fuerza;
+        if (raycast.enSuelo)
+        {
+            fuerza = new Vector2(diferenciaVelocidad * fuerzaControl, 0);
+        } else
+        {
+            fuerza = new Vector2(diferenciaVelocidad * fuerzaAire, 0);
+        }
         rb2D.AddForce(fuerza, ForceMode2D.Force); // Mantén ForceMode2D.Force para control preciso
 
 
@@ -88,7 +96,7 @@ public class movimientoJugador : MonoBehaviour
     private void DetenerMovimiento()
     {
         /*Le decimos que la velocidad de nuestro personaje horizonalmente sea 0*/
-        rb2D.velocity = new Vector2(rb2D.velocity.x * 0.9f, rb2D.velocity.y); // Reduce velocidad gradualmente
+        rb2D.velocity = new Vector2(rb2D.velocity.x, rb2D.velocity.y); // Reduce velocidad gradualmente
     }
 
     private void Girar()
