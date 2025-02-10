@@ -7,6 +7,7 @@ TagManager:
   - Suelo
   - Bomba1
   - Bomba2
+  - Bomba3
   layers:
   - Default
   - TransparentFX
