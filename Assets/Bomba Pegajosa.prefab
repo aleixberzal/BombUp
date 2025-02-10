@@ -118,6 +118,7 @@ GameObject:
   - component: {fileID: 2074160782057196779}
   - component: {fileID: 2231775234690244118}
   - component: {fileID: -1562736109370329268}
+  - component: {fileID: -7173889663067890208}
   m_Layer: 3
   m_Name: Bomba Pegajosa
   m_TagString: Bomba2
@@ -362,3 +363,19 @@ MonoBehaviour:
   contadorPrefab: {fileID: 710692884408852288, guid: 77e1b64d1c528aa44b843b416e3e0fbc, type: 3}
   canvas: {fileID: 8495858716960649051}
   tiempoExplosion: 3
+--- !u!114 &-7173889663067890208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7450099582326764800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e11974456920bc48a50e4adcf3fad61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spritesDinamita:
+  - {fileID: 21300000, guid: 33884feb580e4674a9ad06c7ff301c72, type: 3}
+  - {fileID: 21300000, guid: a19f068a1ac9abe46b7bbe3c7923a016, type: 3}
+  tiempoCambio: 2.9

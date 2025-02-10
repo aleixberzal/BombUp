@@ -7538,6 +7538,7 @@ MonoBehaviour:
   bombaPrefab3: {fileID: 7450099582326764800, guid: 20af497dbd6f5b6498b9c8c12bbd982f, type: 3}
   firePoint: {fileID: 1984944399}
   velocidadBomba: 6
+  cooldownBomba3: 3
 --- !u!114 &1984944393
 MonoBehaviour:
   m_ObjectHideFlags: 0
