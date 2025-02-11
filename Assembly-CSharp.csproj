@@ -65,6 +65,7 @@
     <Compile Include="Assets\detonarBomba.cs" />
     <Compile Include="Assets\Explosiones.cs" />
     <Compile Include="Assets\RaycastSuelo.cs" />
+    <Compile Include="Assets\AssetsAleix\primera_anim.cs" />
     <Compile Include="Assets\MenuPrincipal.cs" />
     <Compile Include="Assets\movimientoJugador.cs" />
     <Compile Include="Assets\JumpCheck.cs" />
