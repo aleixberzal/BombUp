@@ -8,6 +8,7 @@ TagManager:
   - Bomba1
   - Bomba2
   - Bomba3
+  - Jugador
   layers:
   - Default
   - TransparentFX
