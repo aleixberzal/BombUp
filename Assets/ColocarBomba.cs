@@ -9,6 +9,7 @@ public class ColocarBomba : MonoBehaviour
     public GameObject bombaPrefab3;
     public Transform firePoint; // direccion donde dispara
     public float velocidadBomba = 10f;
+    public bool segunda_bomba = false;
 
     private Vector2 direccionBomba = Vector2.right;
 
@@ -37,12 +38,16 @@ public class ColocarBomba : MonoBehaviour
                 LanzarBomba1();  // Coloca la bomba
             }
         }
-        if (Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.X))  // Cuando se presiona la k o la x para controles alternativos
-        {
 
-            if (GameObject.FindGameObjectWithTag("Bomba2") == null)
+        if (segunda_bomba)
+        {
+            if (Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.X))  // Cuando se presiona la k o la x para controles alternativos
             {
-                LanzarBomba2();  // Coloca la bomba pegajosa
+
+                if (GameObject.FindGameObjectWithTag("Bomba2") == null)
+                {
+                    LanzarBomba2();  // Coloca la bomba pegajosa
+                }
             }
         }
         if ((Input.GetKeyDown(KeyCode.L) || Input.GetKeyDown(KeyCode.C)) && Time.time >= tiempoUltimaBomba3 + cooldownBomba3)  // Cuando se presiona la k o la x para controles alternativos
@@ -95,4 +100,10 @@ public class ColocarBomba : MonoBehaviour
         }
         bomba3.transform.right = direccionBomba;
     }
+
+    public void desbloquearSegundaBomba()
+    {
+        segunda_bomba = true;
+    }
 }
+

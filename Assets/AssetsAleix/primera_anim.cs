@@ -14,6 +14,7 @@ public class primera_anim : MonoBehaviour
 
     private float tiempoUltimaBomba3 = 0f;
     public float cooldownBomba3 = 3f;
+    public bool segundaBomba = false;
 
     void Start()
     {
@@ -37,11 +38,14 @@ public class primera_anim : MonoBehaviour
                 LanzarBomba1();  // Lanza la bomba con animación
             }
         }
-        if (Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.X)) // Cuando se presiona la k o la x para controles alternativos
+        if (segundaBomba == true)
         {
-            if (GameObject.FindGameObjectWithTag("Bomba2") == null)
+            if (Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.X)) // Cuando se presiona la k o la x para controles alternativos
             {
-                LanzarBomba2();  // Coloca la bomba pegajosa
+                if (GameObject.FindGameObjectWithTag("Bomba2") == null)
+                {
+                    LanzarBomba2();  // Coloca la bomba pegajosa
+                }
             }
         }
         if ((Input.GetKeyDown(KeyCode.L) || Input.GetKeyDown(KeyCode.C)) && Time.time >= tiempoUltimaBomba3 + cooldownBomba3) // Cuando se presiona la k o la x para controles alternativos
@@ -95,5 +99,9 @@ public class primera_anim : MonoBehaviour
             rb.velocity = direccionBomba * velocidadBomba;
         }
         bomba3.transform.right = direccionBomba;
+    }
+    public void desbloquearSegundaBomba()
+    {
+        segundaBomba = true;
     }
 }

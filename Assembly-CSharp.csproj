@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\TestBomba.cs" />
+    <Compile Include="Assets\bomb_activator.cs" />
     <Compile Include="Assets\BombaExplosion1.cs" />
     <Compile Include="Assets\Camara.cs" />
     <Compile Include="Assets\camaraLenta.cs" />
