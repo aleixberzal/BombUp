@@ -25,10 +25,8 @@ public class ColocarBomba : MonoBehaviour
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
-        if (moveX != 0 || moveY != 0)
-        {
-            direccionBomba = new Vector2(moveX, moveY).normalized;
-        }
+        direccionBomba = new Vector2(moveX, moveY).normalized;
+        
         if (Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.Z))  // Cuando se presiona la j o la z para controles alternativos
         {
 
