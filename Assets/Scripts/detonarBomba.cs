@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class detonarBomba : MonoBehaviour
 {
-    public string tagBuscado = "Bomba3";
+    public string tagBuscado = "Bomba2";
 
     void Update()
     {
@@ -12,7 +12,7 @@ public class detonarBomba : MonoBehaviour
         GameObject bomba = GameObject.FindGameObjectWithTag(tagBuscado);
 
         // Si existe una bomba y se presiona la tecla L
-        if (bomba != null && (Input.GetKeyDown(KeyCode.L) || Input.GetKeyDown(KeyCode.C)))
+        if (bomba != null && (Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.X)))
         {
             // Obtener el componente Explosiones del GameObject
             Explosiones Explosiones = bomba.GetComponent<Explosiones>();

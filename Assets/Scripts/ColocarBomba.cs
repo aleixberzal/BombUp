@@ -12,8 +12,8 @@ public class ColocarBomba : MonoBehaviour
 
     private Vector2 direccionBomba = Vector2.right;
 
-    private float tiempoUltimaBomba3 = 0f;
-    public float cooldownBomba3 = 3f;
+    private float tiempoUltimaBomba2 = 0f;
+    public float cooldownBomba2 = 3f;
     void Start()
     {
         
@@ -35,23 +35,24 @@ public class ColocarBomba : MonoBehaviour
                 LanzarBomba1();  // Coloca la bomba
             }
         }
-        if (Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.X))  // Cuando se presiona la k o la x para controles alternativos
+        if ((Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.X)) && Time.time >= tiempoUltimaBomba2 + cooldownBomba2)  // Cuando se presiona la k o la x para controles alternativos
         {
 
             if (GameObject.FindGameObjectWithTag("Bomba2") == null)
             {
                 LanzarBomba2();  // Coloca la bomba pegajosa
+                tiempoUltimaBomba2 = Time.time;
             }
         }
-        if ((Input.GetKeyDown(KeyCode.L) || Input.GetKeyDown(KeyCode.C)) && Time.time >= tiempoUltimaBomba3 + cooldownBomba3)  // Cuando se presiona la k o la x para controles alternativos
-        {
+        //if ((Input.GetKeyDown(KeyCode.L) || Input.GetKeyDown(KeyCode.C)) && Time.time >= tiempoUltimaBomba3 + cooldownBomba3)  // Cuando se presiona la k o la x para controles alternativos
+        //{
 
-            if (GameObject.FindGameObjectWithTag("Bomba3") == null)
-            {
-                LanzarBomba3();  // Coloca la bomba pegajosa
-                tiempoUltimaBomba3 = Time.time;
-            }
-        }
+        //    if (GameObject.FindGameObjectWithTag("Bomba3") == null)
+        //    {
+        //        LanzarBomba3();  // Coloca la bomba pegajosa
+        //        tiempoUltimaBomba3 = Time.time;
+        //    }
+        //}
     }
 
     void LanzarBomba1()
