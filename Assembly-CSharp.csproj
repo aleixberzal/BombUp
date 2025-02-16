@@ -58,6 +58,7 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.3f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Assets\Scripts\RaycastSuelo.cs" />
     <Compile Include="Assets\Scripts\detonarBomba.cs" />
     <Compile Include="Assets\Scripts\EndGameTrigger.cs" />
@@ -74,6 +75,25 @@
     <Compile Include="Assets\Scripts\Camara.cs" />
     <Compile Include="Assets\Scripts\camaraLenta.cs" />
     <Compile Include="Assets\Scripts\BombaPegajosa.cs" />
+=======
+    <Compile Include="Assets\TestBomba.cs" />
+    <Compile Include="Assets\bomb_activator.cs" />
+    <Compile Include="Assets\BombaExplosion1.cs" />
+    <Compile Include="Assets\Camara.cs" />
+    <Compile Include="Assets\camaraLenta.cs" />
+    <Compile Include="Assets\detonarBomba.cs" />
+    <Compile Include="Assets\Explosiones.cs" />
+    <Compile Include="Assets\RaycastSuelo.cs" />
+    <Compile Include="Assets\AssetsAleix\primera_anim.cs" />
+    <Compile Include="Assets\MenuPrincipal.cs" />
+    <Compile Include="Assets\movimientoJugador.cs" />
+    <Compile Include="Assets\JumpCheck.cs" />
+    <Compile Include="Assets\MenuPausa.cs" />
+    <Compile Include="Assets\ColocarBomba.cs" />
+    <Compile Include="Assets\BombaPegajosa.cs" />
+    <Compile Include="Assets\ForceController.cs" />
+    <Compile Include="Assets\bombaTiempo.cs" />
+>>>>>>> Aleix
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Pixel Adventure 1\ProjectSettings\ProjectVersion.txt" />

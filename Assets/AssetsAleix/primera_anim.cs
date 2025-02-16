@@ -2,92 +2,86 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ColocarBomba : MonoBehaviour
+public class primera_anim : MonoBehaviour
 {
-    public GameObject bombaPrefab1;  // Arrastra aquí el Prefab "Bomba basica"
+    public GameObject bombaPrefab1;  // Arrastra aquí el Prefab "Bomba basica" que tiene el Animator
     public GameObject bombaPrefab2;
     public GameObject bombaPrefab3;
-    public Transform firePoint; // direccion donde dispara
+    public Transform firePoint; // dirección donde dispara
     public float velocidadBomba = 10f;
-    public bool segunda_bomba = false;
 
     private Vector2 direccionBomba = Vector2.right;
 
-    private float tiempoUltimaBomba2 = 0f;
-    public float cooldownBomba2 = 3f;
+    private float tiempoUltimaBomba3 = 0f;
+    public float cooldownBomba3 = 3f;
+    public bool segundaBomba = false;
+
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
     void Update()
     {
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
-        direccionBomba = new Vector2(moveX, moveY).normalized;
-        
-        if (Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.Z))  // Cuando se presiona la j o la z para controles alternativos
+        if (moveX != 0 || moveY != 0)
         {
+            direccionBomba = new Vector2(moveX, moveY).normalized;
+        }
 
+        if (Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.Z)) // Cuando se presiona la j o la z para controles alternativos
+        {
             if (GameObject.FindGameObjectWithTag("Bomba1") == null)
             {
-                LanzarBomba1();  // Coloca la bomba
+                LanzarBomba1();  // Lanza la bomba con animación
             }
         }
-<<<<<<< HEAD:Assets/Scripts/ColocarBomba.cs
-        if ((Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.X)) && Time.time >= tiempoUltimaBomba2 + cooldownBomba2)  // Cuando se presiona la k o la x para controles alternativos
+        if (segundaBomba == true)
         {
-=======
->>>>>>> Aleix:Assets/ColocarBomba.cs
-
-        if (segunda_bomba)
-        {
-            if (Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.X))  // Cuando se presiona la k o la x para controles alternativos
+            if (Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.X)) // Cuando se presiona la k o la x para controles alternativos
             {
-<<<<<<< HEAD:Assets/Scripts/ColocarBomba.cs
-                LanzarBomba2();  // Coloca la bomba pegajosa
-                tiempoUltimaBomba2 = Time.time;
-=======
-
                 if (GameObject.FindGameObjectWithTag("Bomba2") == null)
                 {
                     LanzarBomba2();  // Coloca la bomba pegajosa
                 }
->>>>>>> Aleix:Assets/ColocarBomba.cs
             }
         }
-        //if ((Input.GetKeyDown(KeyCode.L) || Input.GetKeyDown(KeyCode.C)) && Time.time >= tiempoUltimaBomba3 + cooldownBomba3)  // Cuando se presiona la k o la x para controles alternativos
-        //{
-
-        //    if (GameObject.FindGameObjectWithTag("Bomba3") == null)
-        //    {
-        //        LanzarBomba3();  // Coloca la bomba pegajosa
-        //        tiempoUltimaBomba3 = Time.time;
-        //    }
-        //}
+        if ((Input.GetKeyDown(KeyCode.L) || Input.GetKeyDown(KeyCode.C)) && Time.time >= tiempoUltimaBomba3 + cooldownBomba3) // Cuando se presiona la k o la x para controles alternativos
+        {
+            if (GameObject.FindGameObjectWithTag("Bomba3") == null)
+            {
+                LanzarBomba3();  // Coloca la bomba pegajosa
+                tiempoUltimaBomba3 = Time.time;
+            }
+        }
     }
 
     void LanzarBomba1()
     {
         GameObject bomba1 = Instantiate(bombaPrefab1, firePoint.position, Quaternion.identity);  // Instancia la bomba
 
-        // Aplicar velocidad al proyectil
+        // Aplicar velocidad al proyectil (si tu animación es en movimiento, no es necesario)
         Rigidbody2D rb = bomba1.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
             rb.velocity = direccionBomba * velocidadBomba;
         }
+
         bomba1.transform.right = direccionBomba;
 
+        // Si quieres activar una animación al lanzar la bomba:
+        Animator animator = bomba1.GetComponent<Animator>();
+        if (animator != null)
+        {
+            animator.SetTrigger("Lanzar");  // Asegúrate de que tienes un trigger llamado "Lanzar" en tu Animator
+        }
     }
 
     void LanzarBomba2()
     {
         GameObject bomba2 = Instantiate(bombaPrefab2, firePoint.position, Quaternion.identity);  // Instancia la bomba
-
-        // Aplicar velocidad al proyectil
         Rigidbody2D rb = bomba2.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
@@ -99,8 +93,6 @@ public class ColocarBomba : MonoBehaviour
     void LanzarBomba3()
     {
         GameObject bomba3 = Instantiate(bombaPrefab3, firePoint.position, Quaternion.identity);  // Instancia la bomba
-
-        // Aplicar velocidad al proyectil
         Rigidbody2D rb = bomba3.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
@@ -108,10 +100,8 @@ public class ColocarBomba : MonoBehaviour
         }
         bomba3.transform.right = direccionBomba;
     }
-
     public void desbloquearSegundaBomba()
     {
-        segunda_bomba = true;
+        segundaBomba = true;
     }
 }
-
