@@ -42,6 +42,7 @@ public class primera_anim : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.X)) // Cuando se presiona la k o la x para controles alternativos
             {
+
                 if (GameObject.FindGameObjectWithTag("Bomba2") == null)
                 {
                     LanzarBomba2();  // Coloca la bomba pegajosa

@@ -9,7 +9,7 @@ public class bomb_activator : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            primera_anim bombaScript = collision.GetComponent<primera_anim>();
+            ColocarBomba bombaScript = collision.GetComponent<ColocarBomba>();
 
             if (bombaScript != null)
             {

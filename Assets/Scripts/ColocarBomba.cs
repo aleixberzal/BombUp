@@ -27,7 +27,7 @@ public class ColocarBomba : MonoBehaviour
         float moveY = Input.GetAxisRaw("Vertical");
 
         direccionBomba = new Vector2(moveX, moveY).normalized;
-        
+
         if (Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.Z))  // Cuando se presiona la j o la z para controles alternativos
         {
 
@@ -36,37 +36,23 @@ public class ColocarBomba : MonoBehaviour
                 LanzarBomba1();  // Coloca la bomba
             }
         }
-<<<<<<< HEAD:Assets/Scripts/ColocarBomba.cs
-        if ((Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.X)) && Time.time >= tiempoUltimaBomba2 + cooldownBomba2)  // Cuando se presiona la k o la x para controles alternativos
-        {
-=======
->>>>>>> Aleix:Assets/ColocarBomba.cs
+
 
         if (segunda_bomba)
         {
-            if (Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.X))  // Cuando se presiona la k o la x para controles alternativos
+            if ((Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.X)) && Time.time >= tiempoUltimaBomba2 + cooldownBomba2)  // Cuando se presiona la k o la x para controles alternativos
             {
-<<<<<<< HEAD:Assets/Scripts/ColocarBomba.cs
-                LanzarBomba2();  // Coloca la bomba pegajosa
-                tiempoUltimaBomba2 = Time.time;
-=======
 
                 if (GameObject.FindGameObjectWithTag("Bomba2") == null)
                 {
                     LanzarBomba2();  // Coloca la bomba pegajosa
-                }
->>>>>>> Aleix:Assets/ColocarBomba.cs
-            }
-        }
-        //if ((Input.GetKeyDown(KeyCode.L) || Input.GetKeyDown(KeyCode.C)) && Time.time >= tiempoUltimaBomba3 + cooldownBomba3)  // Cuando se presiona la k o la x para controles alternativos
-        //{
+                    tiempoUltimaBomba2 = Time.time;
 
-        //    if (GameObject.FindGameObjectWithTag("Bomba3") == null)
-        //    {
-        //        LanzarBomba3();  // Coloca la bomba pegajosa
-        //        tiempoUltimaBomba3 = Time.time;
-        //    }
-        //}
+                }
+            }
+        
+        }
+   
     }
 
     void LanzarBomba1()
