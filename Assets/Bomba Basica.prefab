@@ -280,7 +280,7 @@ MonoBehaviour:
   explosiones: {fileID: 2074160782057196779}
   targetColor: {r: 1, g: 0, b: 0, a: 1}
   changeDuration: 0.3
-  interval: 3
+  tiempo: 2
 --- !u!114 &2074160782057196779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -367,4 +367,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contadorPrefab: {fileID: 710692884408852288, guid: 77e1b64d1c528aa44b843b416e3e0fbc, type: 3}
   canvas: {fileID: 7217666250394708318}
-  tiempoExplosion: 3
+  tiempoExplosion: 2

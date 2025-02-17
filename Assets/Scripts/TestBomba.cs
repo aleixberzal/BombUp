@@ -7,7 +7,7 @@ public class TestBomba : MonoBehaviour
     [SerializeField] private Explosiones explosiones;
     [SerializeField] private Color targetColor = Color.red; // Color al que cambiará el objeto
     [SerializeField] private float changeDuration = 0.3f;    // Duración del cambio de color
-    [SerializeField] private float interval = 3f;          // Intervalo entre cambios
+    [SerializeField] private float tiempo = 3f;          // Intervalo entre cambios
 
     private Renderer objectRenderer;                       // Referencia al Renderer del objeto
     private Color originalColor;                           // Color original del objeto
@@ -36,7 +36,7 @@ public class TestBomba : MonoBehaviour
         while (true)
         {
             // Esperar el intervalo inicial antes de cambiar de color
-            yield return new WaitForSeconds(interval);
+            yield return new WaitForSeconds(tiempo);
 
             explosiones.Explode();
 
