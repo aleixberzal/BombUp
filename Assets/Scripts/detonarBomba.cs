@@ -8,7 +8,7 @@ public class detonarBomba : MonoBehaviour
 
     void Update()
     {
-        // Buscar un objeto con el tag "Bomba3"
+        // Buscar un objeto con el tag "Bomba2"
         GameObject bomba = GameObject.FindGameObjectWithTag(tagBuscado);
 
         // Si existe una bomba y se presiona la tecla L
@@ -21,6 +21,7 @@ public class detonarBomba : MonoBehaviour
             if (Explosiones != null)
             {
                 Explosiones.Explode();
+                FindObjectOfType<ColocarBomba>().StartCooldownBomba2();
             }
             else
             {

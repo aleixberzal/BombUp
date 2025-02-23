@@ -14,7 +14,7 @@ public class ColocarBomba : MonoBehaviour
     private Vector2 direccionBomba = Vector2.right;
 
     private float tiempoUltimaBomba2 = 0f;
-    public float cooldownBomba2 = 3f;
+    public float cooldownBomba2 = 0.2f;
     void Start()
     {
         
@@ -28,36 +28,36 @@ public class ColocarBomba : MonoBehaviour
 
         direccionBomba = new Vector2(moveX, moveY).normalized;
 
-        if (Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.Z))  // Cuando se presiona la j o la z para controles alternativos
+        if (Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.Z))
         {
 
             if (GameObject.FindGameObjectWithTag("Bomba1") == null)
             {
-                LanzarBomba1();  // Coloca la bomba
+                LanzarBomba1();
             }
         }
 
 
         if (segunda_bomba)
         {
-            if ((Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.X)) && Time.time >= tiempoUltimaBomba2 + cooldownBomba2)  // Cuando se presiona la k o la x para controles alternativos
+            if ((Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.X)) && Time.time >= tiempoUltimaBomba2)
             {
 
                 if (GameObject.FindGameObjectWithTag("Bomba2") == null)
                 {
-                    LanzarBomba2();  // Coloca la bomba pegajosa
-                    tiempoUltimaBomba2 = Time.time;
-
+                    LanzarBomba2();  
                 }
             }
-        
         }
-   
+    }
+    public void StartCooldownBomba2()
+    {
+        tiempoUltimaBomba2 = Time.time + cooldownBomba2;
     }
 
     void LanzarBomba1()
     {
-        GameObject bomba1 = Instantiate(bombaPrefab1, firePoint.position, Quaternion.identity);  // Instancia la bomba
+        GameObject bomba1 = Instantiate(bombaPrefab1, firePoint.position, Quaternion.identity);
 
         // Aplicar velocidad al proyectil
         Rigidbody2D rb = bomba1.GetComponent<Rigidbody2D>();
@@ -81,6 +81,7 @@ public class ColocarBomba : MonoBehaviour
         }
         bomba2.transform.right = direccionBomba;
     }
+    
 
     void LanzarBomba3()
     {
@@ -99,5 +100,7 @@ public class ColocarBomba : MonoBehaviour
     {
         segunda_bomba = true;
     }
+
+    
 }
 
