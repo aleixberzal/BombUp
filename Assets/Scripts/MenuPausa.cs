@@ -5,50 +5,58 @@ using UnityEngine.SceneManagement;
 
 public class MenuPausa : MonoBehaviour
 {
-
     public GameObject PausaMenu;
     public GameObject ConfiguracionMenu;
     private bool isPaused = false;
     private bool configuracion = false;
 
-
     void Start()
     {
+        Time.timeScale = 1f;
+        Input.ResetInputAxes();
         PausaMenu.SetActive(false);
         ConfiguracionMenu.SetActive(false);
+        isPaused = false;
+        configuracion = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (isPaused)
-            {
-                Resumen();
-            }
-            else if (configuracion)
+            Debug.Log("Escape presionado - isPaused: " + isPaused + ", configuracion: " + configuracion + ", Time.timeScale: " + Time.timeScale);
+
+            if (configuracion)
             {
                 OcultarOtroMenu();
             }
             else
             {
-                Pausa();
+                if (!isPaused)
+                    Pausa();
+                else
+                    Resumen();
             }
         }
     }
+
+
     public void Pausa()
     {
         PausaMenu.SetActive(true);
+        ConfiguracionMenu.SetActive(false);
         Time.timeScale = 0f;
         isPaused = true;
+        configuracion = false;
     }
 
     public void Resumen()
     {
         PausaMenu.SetActive(false);
+        ConfiguracionMenu.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
+        configuracion = false;
     }
 
     public void Reiniciar()
@@ -62,6 +70,7 @@ public class MenuPausa : MonoBehaviour
         PausaMenu.SetActive(false);
         ConfiguracionMenu.SetActive(true);
         configuracion = true;
+
     }
 
     public void OcultarOtroMenu()
@@ -70,10 +79,10 @@ public class MenuPausa : MonoBehaviour
         PausaMenu.SetActive(true);
         configuracion = false;
     }
+
     public void Salir()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("MenuPrincipal");
     }
-
 }
