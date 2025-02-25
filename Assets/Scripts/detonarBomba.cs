@@ -16,9 +16,10 @@ public class detonarBomba : MonoBehaviour
         {
             // Obtener el componente Explosiones del GameObject
             Explosiones Explosiones = bomba.GetComponent<Explosiones>();
+            BombaPegajosa bombaPegajosa = bomba.GetComponent<BombaPegajosa>();
 
             // Si el componente existe, ejecutar la explosión
-            if (Explosiones != null)
+            if (Explosiones != null && bombaPegajosa != null && bombaPegajosa.pegado)
             {
                 Explosiones.Explode();
                 FindObjectOfType<ColocarBomba>().StartCooldownBomba2();

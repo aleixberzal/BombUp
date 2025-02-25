@@ -5685,7 +5685,6 @@ GameObject:
   - component: {fileID: 235976905}
   - component: {fileID: 235976904}
   - component: {fileID: 235976903}
-  - component: {fileID: 235976902}
   m_Layer: 5
   m_Name: Resumen.button
   m_TagString: Untagged
@@ -5714,20 +5713,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.000026703, y: 278}
   m_SizeDelta: {x: 358.1054, y: 157.6256}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &235976902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 235976900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46f0326badbda0640b337c1a1a843ed9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PausaMenu: {fileID: 288156246}
-  ConfiguracionMenu: {fileID: 1495782167}
 --- !u!114 &235976903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5772,9 +5757,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 235976902}
+      - m_Target: {fileID: 1853568717}
         m_TargetAssemblyTypeName: MenuPausa, Assembly-CSharp
-        m_MethodName: Resumen
+        m_MethodName: Reanudar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6355,7 +6340,6 @@ GameObject:
   - component: {fileID: 967015161}
   - component: {fileID: 967015160}
   - component: {fileID: 967015159}
-  - component: {fileID: 967015158}
   m_Layer: 5
   m_Name: Reiniciar.button
   m_TagString: Untagged
@@ -6384,20 +6368,6 @@ RectTransform:
   m_AnchoredPosition: {x: 2.005, y: 94}
   m_SizeDelta: {x: 358.11, y: 157.63}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &967015158
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 967015156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46f0326badbda0640b337c1a1a843ed9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PausaMenu: {fileID: 288156246}
-  ConfiguracionMenu: {fileID: 1495782167}
 --- !u!114 &967015159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6442,7 +6412,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 967015158}
+      - m_Target: {fileID: 1853568717}
         m_TargetAssemblyTypeName: MenuPausa, Assembly-CSharp
         m_MethodName: Reiniciar
         m_Mode: 1
@@ -6504,7 +6474,6 @@ GameObject:
   - component: {fileID: 1263154994}
   - component: {fileID: 1263154993}
   - component: {fileID: 1263154992}
-  - component: {fileID: 1263154991}
   m_Layer: 5
   m_Name: Salir.button
   m_TagString: Untagged
@@ -6533,20 +6502,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.000010252, y: -277}
   m_SizeDelta: {x: 354.1, y: 157.63}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1263154991
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1263154989}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46f0326badbda0640b337c1a1a843ed9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PausaMenu: {fileID: 288156246}
-  ConfiguracionMenu: {fileID: 1495782167}
 --- !u!114 &1263154992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6591,7 +6546,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1263154991}
+      - m_Target: {fileID: 1853568717}
         m_TargetAssemblyTypeName: MenuPausa, Assembly-CSharp
         m_MethodName: Salir
         m_Mode: 1
@@ -6653,7 +6608,6 @@ GameObject:
   - component: {fileID: 1383683202}
   - component: {fileID: 1383683201}
   - component: {fileID: 1383683200}
-  - component: {fileID: 1383683199}
   m_Layer: 5
   m_Name: Volver
   m_TagString: Untagged
@@ -6682,20 +6636,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.1448, y: -277.4149}
   m_SizeDelta: {x: 351.7104, y: 161.1703}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1383683199
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1383683197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46f0326badbda0640b337c1a1a843ed9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PausaMenu: {fileID: 288156246}
-  ConfiguracionMenu: {fileID: 1495782167}
 --- !u!114 &1383683200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6740,9 +6680,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1383683199}
+      - m_Target: {fileID: 1853568717}
         m_TargetAssemblyTypeName: MenuPausa, Assembly-CSharp
-        m_MethodName: OcultarOtroMenu
+        m_MethodName: MostrarMenuPausa
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6879,7 +6819,6 @@ GameObject:
   - component: {fileID: 1511705515}
   - component: {fileID: 1511705514}
   - component: {fileID: 1511705513}
-  - component: {fileID: 1511705512}
   m_Layer: 5
   m_Name: Configuracion.button
   m_TagString: Untagged
@@ -6908,20 +6847,6 @@ RectTransform:
   m_AnchoredPosition: {x: -2.0027, y: -92}
   m_SizeDelta: {x: 354.1, y: 157.63}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1511705512
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1511705510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46f0326badbda0640b337c1a1a843ed9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PausaMenu: {fileID: 288156246}
-  ConfiguracionMenu: {fileID: 1495782167}
 --- !u!114 &1511705513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6966,9 +6891,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1511705512}
+      - m_Target: {fileID: 1853568717}
         m_TargetAssemblyTypeName: MenuPausa, Assembly-CSharp
-        m_MethodName: Configuracion
+        m_MethodName: AbrirConfiguracion
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7147,8 +7072,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46f0326badbda0640b337c1a1a843ed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PausaMenu: {fileID: 288156246}
-  ConfiguracionMenu: {fileID: 1495782167}
+  menuPausa: {fileID: 288156246}
+  menuConfiguracion: {fileID: 1495782167}
 --- !u!114 &1853568718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7464,6 +7389,7 @@ GameObject:
   - component: {fileID: 1984944393}
   - component: {fileID: 1984944392}
   - component: {fileID: 1984944391}
+  - component: {fileID: 1984944400}
   m_Layer: 6
   m_Name: Jugador
   m_TagString: Untagged
@@ -7697,6 +7623,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1984944400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984944390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38d1b91cacb9d2a4b84ecc7467623451, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tiempoLento: 0.5
+  tiempoNormal: 1
 --- !u!1 &2083562289
 GameObject:
   m_ObjectHideFlags: 0

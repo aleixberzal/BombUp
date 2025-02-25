@@ -8,7 +8,7 @@ public class MenuPrincipal : MonoBehaviour
     public void Juego()
     {
         Debug.Log("Juego");
-        SceneManager.LoadScene("Juego");
+        SceneManager.LoadScene("FerranScene");
     }
 
     public void Salir()

@@ -5,7 +5,7 @@ using UnityEngine;
 public class BombaPegajosa : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private bool pegado = false;
+    public bool pegado = false;
     // Start is called before the first frame update
     void Start()
     {

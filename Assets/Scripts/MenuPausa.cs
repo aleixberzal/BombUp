@@ -1,62 +1,54 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuPausa : MonoBehaviour
 {
-    public GameObject PausaMenu;
-    public GameObject ConfiguracionMenu;
-    private bool isPaused = false;
-    private bool configuracion = false;
+    public GameObject menuPausa;
+    public GameObject menuConfiguracion;
+    private bool estaPausado = false;
+    private bool enConfiguracion = false;
 
     void Start()
     {
-        Time.timeScale = 1f;
-        Input.ResetInputAxes();
-        PausaMenu.SetActive(false);
-        ConfiguracionMenu.SetActive(false);
-        isPaused = false;
-        configuracion = false;
+        menuPausa.SetActive(false);
+        menuConfiguracion.SetActive(false);
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Debug.Log("Escape presionado - isPaused: " + isPaused + ", configuracion: " + configuracion + ", Time.timeScale: " + Time.timeScale);
-
-            if (configuracion)
+            if (enConfiguracion)
             {
-                OcultarOtroMenu();
+                MostrarMenuPausa();
             }
             else
             {
-                if (!isPaused)
-                    Pausa();
-                else
-                    Resumen();
+                AlternarPausa();
             }
         }
     }
 
-
-    public void Pausa()
+    private void AlternarPausa()
     {
-        PausaMenu.SetActive(true);
-        ConfiguracionMenu.SetActive(false);
-        Time.timeScale = 0f;
-        isPaused = true;
-        configuracion = false;
+        if (estaPausado)
+            Reanudar();
+        else
+            Pausar();
     }
 
-    public void Resumen()
+    public void Pausar()
     {
-        PausaMenu.SetActive(false);
-        ConfiguracionMenu.SetActive(false);
+        CambiarEstadoMenus(true, false);
+        Time.timeScale = 0f;
+        estaPausado = true;
+    }
+
+    public void Reanudar()
+    {
+        CambiarEstadoMenus(false, false);
         Time.timeScale = 1f;
-        isPaused = false;
-        configuracion = false;
+        estaPausado = false;
     }
 
     public void Reiniciar()
@@ -65,24 +57,26 @@ public class MenuPausa : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void Configuracion()
+    public void AbrirConfiguracion()
     {
-        PausaMenu.SetActive(false);
-        ConfiguracionMenu.SetActive(true);
-        configuracion = true;
-
+        CambiarEstadoMenus(false, true);
     }
 
-    public void OcultarOtroMenu()
+    public void MostrarMenuPausa()
     {
-        ConfiguracionMenu.SetActive(false);
-        PausaMenu.SetActive(true);
-        configuracion = false;
+        CambiarEstadoMenus(true, false);
     }
 
     public void Salir()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("MenuPrincipal");
+    }
+
+    private void CambiarEstadoMenus(bool mostrarPausa, bool mostrarConfiguracion)
+    {
+        menuPausa.SetActive(mostrarPausa);
+        menuConfiguracion.SetActive(mostrarConfiguracion);
+        enConfiguracion = mostrarConfiguracion;
     }
 }
