@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\bomb_activator.cs" />
     <Compile Include="Assets\Scripts\movimientoJugador.cs" />
     <Compile Include="Assets\Scripts\TestBomba.cs" />
+    <Compile Include="Assets\Scripts\MenuConfig.cs" />
     <Compile Include="Assets\Scripts\BombaExplosion1.cs" />
     <Compile Include="Assets\Scripts\JumpCheck.cs" />
     <Compile Include="Assets\Scripts\ForceController.cs" />
