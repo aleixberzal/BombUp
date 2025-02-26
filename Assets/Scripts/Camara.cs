@@ -13,6 +13,13 @@ public class MainCamera : MonoBehaviour
     // Velocidad para suavizar el movimiento vertical de la cámara
     public float smoothSpeed = 0.125f;
 
+    void Start()
+    {
+        // Forzar una relación de aspecto 16:9 (1920x1080)
+        float aspectRatio = 16f / 9f;
+        Camera.main.aspect = aspectRatio;
+    }
+
     void LateUpdate()
     {
         // Construimos la posición deseada manteniendo X y Z fijos y usando el Y del jugador
