@@ -14,7 +14,7 @@ public class MenuPrincipal : MonoBehaviour
     public void Juego()
     {
         Debug.Log("Juego");
-        SceneManager.LoadScene("FerranScene");
+        SceneManager.LoadScene("Escena Principal");
     }
 
     public void Salir()

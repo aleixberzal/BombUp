@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuPrincipal.unity
     guid: 625d7f74753a9a743823cb69ad694d0f
   - enabled: 1
+    path: Assets/Scenes/Escena Principal.unity
+    guid: 6d816c36f579d90499135462b0f75f58
+  - enabled: 0
     path: Assets/Scenes/FerranScene.unity
     guid: e7b4fd97ad678d14295fc7bd021cc4a2
   m_configObjects: {}
