@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class ColocarBomba : MonoBehaviour
 {
-    public GameObject bombaPrefab1;  // Arrastra aquí el Prefab "Bomba basica"
+    public GameObject bombaPrefab1;  
     public GameObject bombaPrefab2;
     public GameObject bombaPrefab3;
     public Transform firePoint; // direccion donde dispara
     public float velocidadBomba = 10f;
+    public bool primera_bomba = false;
     public bool segunda_bomba = false;
+    public bool tercera_bomba = false;
 
     private Vector2 direccionBomba = Vector2.right;
 
@@ -28,15 +30,17 @@ public class ColocarBomba : MonoBehaviour
 
         direccionBomba = new Vector2(moveX, moveY).normalized;
 
-        if (Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.Z))
+        if (primera_bomba)
         {
-
-            if (GameObject.FindGameObjectWithTag("Bomba1") == null)
+            if (Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.Z))
             {
-                LanzarBomba1();
+
+                if (GameObject.FindGameObjectWithTag("Bomba1") == null)
+                {
+                    LanzarBomba1();
+                }
             }
         }
-
 
         if (segunda_bomba)
         {
@@ -96,11 +100,22 @@ public class ColocarBomba : MonoBehaviour
         bomba3.transform.right = direccionBomba;
     }
 
+    public void desbloquearPrimeraBomba()
+    {
+        primera_bomba = true;
+    }
+
     public void desbloquearSegundaBomba()
     {
         segunda_bomba = true;
     }
 
-    
+    public void desbloquearTerceraBomba()
+    {
+        tercera_bomba = true;
+    }
+
+
+
 }
 
