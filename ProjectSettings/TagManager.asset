@@ -5,16 +5,20 @@ TagManager:
   serializedVersion: 2
   tags:
   - Suelo
+  - Bomba1
+  - Bomba2
+  - Bomba3
+  - Jugador
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Bomba
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Jugador
+  - Ground
+  - Techos
   - 
   - 
   - 
