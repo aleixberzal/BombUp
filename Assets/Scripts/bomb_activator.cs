@@ -7,6 +7,7 @@ public class bomb_activator : MonoBehaviour
 {
     public Image boton1; 
     public Image boton2; 
+    public Image boton3;
     //public Image boton3; 
 
     public enum BombaTipo { Primera, Segunda, Tercera }; // Enumeración para distinguir las bombas
@@ -32,7 +33,7 @@ public class bomb_activator : MonoBehaviour
                         break;
                     case BombaTipo.Tercera:
                         bombaScript.desbloquearTerceraBomba();
-                        //boton3.enabled = true; 
+                        boton3.enabled = true; 
                         break;
                 }
             }
