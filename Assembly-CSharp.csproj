@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\Explosiones.cs" />
     <Compile Include="Assets\Scripts\Camara.cs" />
     <Compile Include="Assets\Scripts\camaraLenta.cs" />
+    <Compile Include="Assets\dash.cs" />
     <Compile Include="Assets\Scripts\BombaPegajosa.cs" />
   </ItemGroup>
   <ItemGroup>
