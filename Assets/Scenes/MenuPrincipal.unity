@@ -594,7 +594,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1211344860}
         m_TargetAssemblyTypeName: MenuPrincipal, Assembly-CSharp
-        m_MethodName: Juego
+        m_MethodName: NuevaPartida
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2838,10 +2838,10 @@ RectTransform:
   - {fileID: 1935977278}
   - {fileID: 1258535816}
   - {fileID: 153205809}
+  - {fileID: 875619720}
   - {fileID: 125731632}
   - {fileID: 98366642}
   - {fileID: 875313231}
-  - {fileID: 875619720}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

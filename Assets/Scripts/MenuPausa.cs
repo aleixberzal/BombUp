@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using System.IO;
 
 public class MenuPausa : MonoBehaviour
 {
@@ -57,7 +58,13 @@ public class MenuPausa : MonoBehaviour
     public void Reiniciar()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        string filePath = Application.persistentDataPath + "/playerData.json";
+        if (File.Exists(filePath))
+        {
+            File.Delete(filePath);
+        }
+
+        SceneManager.LoadScene("FerranScene");
     }
 
     public void AbrirConfiguracion()

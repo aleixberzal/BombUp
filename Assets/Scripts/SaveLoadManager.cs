@@ -4,35 +4,54 @@ using System.IO;
 public class SaveLoadManager : MonoBehaviour
 {
     private string filePath;
+    public static SaveLoadManager instance;
 
-    void Start()
+    void Awake()
     {
-        filePath = Application.persistentDataPath + "/playerData.json"; // Asegúrate de que esta ruta sea correcta
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        filePath = Application.persistentDataPath + "/playerData.json";
     }
 
-    // Función para guardar los datos
     public void GuardaPartida(PlayerData data)
     {
         string json = JsonUtility.ToJson(data);
+        Debug.Log($"Escribiendo archivo: {json}");
+
         File.WriteAllText(filePath, json);
-        Debug.Log("Partida guardada.");
+        Debug.Log($"Partida guardada en: {filePath}");
     }
 
-    // Función para cargar los datos
+
     public PlayerData CargaPartida()
     {
         if (File.Exists(filePath))
         {
             string json = File.ReadAllText(filePath);
-            PlayerData data = JsonUtility.FromJson<PlayerData>(json); // Convertimos el JSON en un objeto
-            Debug.Log("Partida cargada.");
+            Debug.Log("Contenido del archivo guardado: " + json); // Imprimir el contenido del archivo
+            PlayerData data = JsonUtility.FromJson<PlayerData>(json);
+            Debug.Log($"Partida cargada: Posición X={data.playerPositionX}, Y={data.playerPositionY}");
             return data;
         }
         else
         {
-            Debug.LogWarning("No se encontró una partida guardada.");
-            return null; // Si no existe el archivo, devuelve null
+            Debug.Log("No se encontró un archivo de guardado.");
+            return null;
         }
+    }
+
+
+    public bool ExistePartida()
+    {
+        return File.Exists(filePath);
     }
 }
 
@@ -41,7 +60,4 @@ public class PlayerData
 {
     public float playerPositionX;
     public float playerPositionY;
-    public bool bomba1;
-    public bool bomba2;  // Otros datos que quieras guardar
 }
-

@@ -2,25 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.IO;
 
 public class MenuPrincipal : MonoBehaviour
 {
     public GameObject menuConfiguracion;
     public SaveLoadManager saveLoadManager;
 
-    private void Start()
+    void Start()
     {
         menuConfiguracion.SetActive(false);
     }
-    public void Juego()
+
+    public void NuevaPartida()
     {
-        Debug.Log("Juego");
+        string filePath = Application.persistentDataPath + "/playerData.json";
+        if (File.Exists(filePath))
+        {
+            File.Delete(filePath);
+        }
+
         SceneManager.LoadScene("FerranScene");
     }
 
     public void Salir()
     {
-        Debug.Log("Salir");
         Application.Quit();
     }
 
@@ -35,19 +41,13 @@ public class MenuPrincipal : MonoBehaviour
 
     public void CargarPartida()
     {
-        // Cargar los datos de la partida guardada
-        PlayerData data = saveLoadManager.CargaPartida();
-        if (data != null)
+        if (FindObjectOfType<SaveLoadManager>().ExistePartida())
         {
-            // Si la partida existe, cargamos la escena del juego
-            SceneManager.LoadScene("FerranScene");  // Reemplaza "Juego" por el nombre de tu escena del juego
-
-            // También puedes pasar los datos al objeto de jugador si es necesario
-            // Ejemplo: GameObject.Find("Jugador").GetComponent<Player>().CargarPosicion(data);
+            SceneManager.LoadScene("FerranScene");
         }
         else
         {
-            Debug.LogWarning("No se encontró una partida guardada.");
+            Debug.Log("No hay partida guardada.");
         }
     }
 }
