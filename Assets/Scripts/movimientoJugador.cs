@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class movimientoJugador : MonoBehaviour
 {
+    public GameObject render;
+
     [SerializeField] private RaycastSuelo raycast;
     private Rigidbody2D rb2D;
 
@@ -102,8 +104,10 @@ public class movimientoJugador : MonoBehaviour
     private void Girar()
     {
         mirandoDerecha = !mirandoDerecha;
-        Vector3 escala = transform.localScale;
+        Vector3 escala = render.transform.localScale;
         escala.x *= -1;
-        transform.localScale = escala;
+        render.transform.localScale = escala;
+
+
     }
 }
