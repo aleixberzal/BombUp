@@ -6,6 +6,7 @@ using static UnityEngine.GraphicsBuffer;
 public class BoostIndicator : MonoBehaviour
 {
     public Transform bomb;  // The bomb's transform
+    public ColocarBomba ColocarBomba;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +17,7 @@ public class BoostIndicator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        bomb = ColocarBomba.bomba1.transform;
 
         if (bomb != null)
         {
