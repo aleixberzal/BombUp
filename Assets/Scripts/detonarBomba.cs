@@ -6,6 +6,8 @@ public class detonarBomba : MonoBehaviour
 {
     public string tagBuscado = "Bomba2";
 
+
+    
     void Update()
     {
         // Buscar un objeto con el tag "Bomba2"

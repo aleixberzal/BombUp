@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ColocarBomba : MonoBehaviour
 {
+    public BoostIndicator BoostIndicator;
 
     public GameObject bomba1;
     public GameObject bombaPrefab1;  
@@ -80,7 +81,7 @@ public class ColocarBomba : MonoBehaviour
     {
         bomba1 = Instantiate(bombaPrefab1, firePoint.position, Quaternion.identity);
 
-        
+        BoostIndicator.bomb1Active = true;
 
         // Aplicar velocidad al proyectil
         Rigidbody2D rb = bomba1.GetComponent<Rigidbody2D>();

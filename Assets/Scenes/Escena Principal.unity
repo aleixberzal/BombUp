@@ -609,6 +609,14 @@ CompositeCollider2D:
         Y: 12800000
       - X: -37425000
         Y: 12800000
+    - - X: 31325000
+        Y: 6400000
+      - X: 18675000
+        Y: 6400000
+      - X: 18675000
+        Y: 0
+      - X: 31325000
+        Y: 0
     - - X: 12574999
         Y: -25600000
       - X: 56325000
@@ -699,6 +707,10 @@ CompositeCollider2D:
       - {x: -3.7425292, y: 1.9199998}
       - {x: -5.0075, y: 1.9199704}
       - {x: -5.007471, y: 1.28}
+    - - {x: 3.1324708, y: 0}
+      - {x: 3.1324708, y: 0.64}
+      - {x: 1.8675001, y: 0.6399707}
+      - {x: 1.8675293, y: 0}
     - - {x: -0.61752933, y: -5.12}
       - {x: -0.6174706, y: -4.48}
       - {x: 0.0074999, y: -4.479971}
@@ -909,6 +921,26 @@ Tilemap:
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
   - first: {x: 8, y: -4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 3, y: 0, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 4, y: 0, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 0
@@ -1500,13 +1532,13 @@ Tilemap:
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 69
+  - m_RefCount: 71
     m_Data: {fileID: 11400000, guid: 798f7fe124c93054ba0631071bfbb9f1, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 69
+  - m_RefCount: 71
     m_Data: {fileID: 21300000, guid: 5ec7ba6c9fcd0344cb133918b06c8c45, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 69
+  - m_RefCount: 71
     m_Data:
       e00: 1
       e01: 0
@@ -1525,7 +1557,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 69
+  - m_RefCount: 71
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1

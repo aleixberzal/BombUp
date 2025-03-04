@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TestBomba : MonoBehaviour
 {
+    public BoostIndicator BoostIndicator;
+
     [SerializeField] private Explosiones explosiones;
     [SerializeField] private Color targetColor = Color.red; // Color al que cambiará el objeto
     [SerializeField] private float changeDuration = 0.3f;    // Duración del cambio de color
@@ -11,6 +13,9 @@ public class TestBomba : MonoBehaviour
 
     private Renderer objectRenderer;                       // Referencia al Renderer del objeto
     private Color originalColor;                           // Color original del objeto
+
+    public float currentTime = 0;
+    public bool hasExploded = false;
 
     void Start()
     {
@@ -21,9 +26,6 @@ public class TestBomba : MonoBehaviour
         {
             // Guardar el color original del material
             originalColor = objectRenderer.material.color;
-
-            // Iniciar la corrutina para cambiar de color
-            StartCoroutine(ChangeColorRoutine());
         }
         else
         {
@@ -31,23 +33,18 @@ public class TestBomba : MonoBehaviour
         }
     }
 
-    private IEnumerator ChangeColorRoutine()
+    private void Update()
     {
-        while (true)
+        if (!hasExploded)
         {
-            // Esperar el intervalo inicial antes de cambiar de color
-            yield return new WaitForSeconds(tiempo);
-
-            explosiones.Explode();
-
-            // Cambiar al color objetivo
-            objectRenderer.material.color = targetColor;
-
-            // Esperar durante el tiempo de duración
-            yield return new WaitForSeconds(changeDuration);
-
-            // Volver al color original
-            objectRenderer.material.color = originalColor;
+            currentTime += Time.deltaTime;
+            if (currentTime >= tiempo){
+                hasExploded = true;
+                explosiones.Explode();
+                BoostIndicator.bomb1Active = false;
+            }
         }
+        
     }
+
 }
