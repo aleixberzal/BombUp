@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\MenuConfig.cs" />
     <Compile Include="Assets\Scripts\BombaExplosion1.cs" />
     <Compile Include="Assets\Scripts\JumpCheck.cs" />
+    <Compile Include="Assets\Scripts\tutoScript.cs" />
     <Compile Include="Assets\Scripts\ForceController.cs" />
     <Compile Include="Assets\Scripts\Explosiones.cs" />
     <Compile Include="Assets\Scripts\Camara.cs" />
