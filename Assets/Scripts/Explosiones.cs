@@ -21,6 +21,7 @@ public class Explosiones : MonoBehaviour
                 {
                     Vector2 forceDirection = (rb.transform.position - transform.position).normalized;
                     rb.AddForce(forceDirection * force, ForceMode2D.Impulse);
+                    StartCoroutine(FindObjectOfType<CameraShake>().Shake(1f, 1f));
                     Destroy(gameObject);
                 }
             }
