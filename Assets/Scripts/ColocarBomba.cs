@@ -12,7 +12,6 @@ public class ColocarBomba : MonoBehaviour
     public GameObject bombaPrefab3;
     public Transform firePoint; // direccion donde dispara
     public float velocidadBomba = 10f;
-    public float velocidadBomba3 = 20f;
     public bool primera_bomba = false;
     public bool segunda_bomba = false;
     public bool tercera_bomba = false;
@@ -20,9 +19,10 @@ public class ColocarBomba : MonoBehaviour
     private Vector2 direccionBomba = Vector2.right;
 
     private float tiempoUltimaBomba2 = 0f;
-    private float tiempoUltimaBomba3 = 0f;
+    private float lastBomb3 = 0f;
     public float cooldownBomba2 = 0.2f;
-    public float cooldownBomba3 = 0.2f;
+    public float cooldownBomb3 = 0.2f;
+
     void Start()
     {
         
@@ -62,7 +62,7 @@ public class ColocarBomba : MonoBehaviour
 
         if (tercera_bomba)
         {
-            if ((Input.GetKeyDown(KeyCode.L) || Input.GetKeyDown(KeyCode.C)) && Time.time >= tiempoUltimaBomba3)
+            if ((Input.GetKeyDown(KeyCode.L) || Input.GetKeyDown(KeyCode.C)))
             {
 
                 if (GameObject.FindGameObjectWithTag("Bomba3") == null)
@@ -75,6 +75,11 @@ public class ColocarBomba : MonoBehaviour
     public void StartCooldownBomba2()
     {
         tiempoUltimaBomba2 = Time.time + cooldownBomba2;
+    }
+
+    public void StartCooldownBomb3()
+    {
+        lastBomb3 = Time.time + cooldownBomb3;
     }
 
     void LanzarBomba1()
@@ -109,29 +114,22 @@ public class ColocarBomba : MonoBehaviour
 
     void LanzarBomba3()
     {
-        Vector2 direccionBomba;
+        //Vector2 direccionBomba;
 
-        if (transform.localScale.x > 0) 
-        {
-            direccionBomba = Vector2.left; 
-        }
-        else 
-        {
-            direccionBomba = Vector2.right; 
-        }
+        //if (transform.localScale.x > 0) 
+        //{
+        //    direccionBomba = Vector2.left; 
+        //}
+        //else 
+        //{
+        //    direccionBomba = Vector2.right; 
+        //}
 
-        
+
         GameObject bomba3 = Instantiate(bombaPrefab3, firePoint.position, Quaternion.identity);
 
 
         Rigidbody2D rb = bomba3.GetComponent<Rigidbody2D>();
-        if (rb != null)
-        {
-            rb.velocity = direccionBomba * velocidadBomba3;
-        }
-
-        bomba3.transform.right = direccionBomba;
-        tiempoUltimaBomba3 = Time.time + cooldownBomba3;
     }
 
 

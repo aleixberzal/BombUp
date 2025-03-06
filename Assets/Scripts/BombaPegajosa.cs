@@ -13,7 +13,7 @@ public class BombaPegajosa : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (!pegado && collision.gameObject.CompareTag("Suelo")) // Cambia "Pared" por el tag de las paredes
+        if (!pegado && collision.gameObject.CompareTag("Suelo"))
         {
             pegado = true;
             rb.velocity = Vector2.zero; // Detiene el movimiento
