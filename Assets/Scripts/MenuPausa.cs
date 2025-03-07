@@ -57,7 +57,11 @@ public class MenuPausa : MonoBehaviour
 
     public void Reiniciar()
     {
+        Progreso progreso = FindObjectOfType<Progreso>();
         Time.timeScale = 1f;
+        progreso.bomba1desbloqueada = false;
+        progreso.bomba2desbloqueada = false;
+        progreso.bomba3desbloqueada = false;
         string filePath = Application.persistentDataPath + "/playerData.json";
         if (File.Exists(filePath))
         {

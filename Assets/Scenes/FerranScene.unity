@@ -144,6 +144,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1611401521}
     - target: {fileID: -2324110995306824597, guid: 0b500579c8e09894f84ce17c5d9de5d8, type: 3}
+      propertyPath: bomba1
+      value: 
+      objectReference: {fileID: 816016528}
+    - target: {fileID: -2324110995306824597, guid: 0b500579c8e09894f84ce17c5d9de5d8, type: 3}
+      propertyPath: bomba2
+      value: 
+      objectReference: {fileID: 559044658}
+    - target: {fileID: -2324110995306824597, guid: 0b500579c8e09894f84ce17c5d9de5d8, type: 3}
+      propertyPath: bomba3
+      value: 
+      objectReference: {fileID: 696663076}
+    - target: {fileID: -2324110995306824597, guid: 0b500579c8e09894f84ce17c5d9de5d8, type: 3}
       propertyPath: boton1
       value: 
       objectReference: {fileID: 17885167}
@@ -576,6 +588,18 @@ PrefabInstance:
       propertyPath: tuto3
       value: 
       objectReference: {fileID: 1611401521}
+    - target: {fileID: 1858325009973404709, guid: adb9a1446c1af794aa38a561e0943edb, type: 3}
+      propertyPath: bomba1
+      value: 
+      objectReference: {fileID: 816016528}
+    - target: {fileID: 1858325009973404709, guid: adb9a1446c1af794aa38a561e0943edb, type: 3}
+      propertyPath: bomba2
+      value: 
+      objectReference: {fileID: 559044658}
+    - target: {fileID: 1858325009973404709, guid: adb9a1446c1af794aa38a561e0943edb, type: 3}
+      propertyPath: bomba3
+      value: 
+      objectReference: {fileID: 696663076}
     - target: {fileID: 1858325009973404709, guid: adb9a1446c1af794aa38a561e0943edb, type: 3}
       propertyPath: boton1
       value: 
@@ -17299,6 +17323,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4eb6273e4e9f8541b5af3841aec2690, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &559044658 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6550421997248797241, guid: adb9a1446c1af794aa38a561e0943edb, type: 3}
+  m_PrefabInstance: {fileID: 158428653}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &612000078
 GameObject:
   m_ObjectHideFlags: 0
@@ -17380,6 +17409,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 28}
   m_Pivot: {x: 0.5, y: 1}
+--- !u!1 &696663076 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5605855717977904607, guid: 0b500579c8e09894f84ce17c5d9de5d8, type: 3}
+  m_PrefabInstance: {fileID: 9483677}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &720986283
 GameObject:
   m_ObjectHideFlags: 0
@@ -17587,6 +17621,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 775328183}
   m_CullTransparentMesh: 1
+--- !u!1 &816016528 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6374793629610587623, guid: 98254231ac5edc643abec7789a1774f6, type: 3}
+  m_PrefabInstance: {fileID: 1645420386}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &861919131
 GameObject:
   m_ObjectHideFlags: 0
@@ -18110,7 +18149,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 960, y: 0}
+  m_AnchoredPosition: {x: 960, y: 540}
   m_SizeDelta: {x: 1165.6648, y: 807.6137}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1087410468
@@ -18761,7 +18800,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1118718690}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.67, y: -6.98, z: 0}
+  m_LocalPosition: {x: 5.67, y: -6.98, z: -0.38}
   m_LocalScale: {x: 0.7569, y: 0.7248, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18844,6 +18883,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   saveLoadManager: {fileID: 612000079}
+  bomba1desbloqueada: 0
+  bomba2desbloqueada: 0
+  bomba3desbloqueada: 0
 --- !u!114 &1142642696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18902,12 +18944,11 @@ MonoBehaviour:
   bombaPrefab3: {fileID: 7450099582326764800, guid: 20af497dbd6f5b6498b9c8c12bbd982f, type: 3}
   firePoint: {fileID: 1142642705}
   velocidadBomba: 6
-  velocidadBomba3: 20
   primera_bomba: 0
   segunda_bomba: 0
   tercera_bomba: 0
   cooldownBomba2: 3
-  cooldownBomba3: 0.2
+  cooldownBomb3: 0.2
 --- !u!114 &1142642699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20146,7 +20187,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 960, y: 0}
+  m_AnchoredPosition: {x: 960.13, y: 540}
   m_SizeDelta: {x: 983.26, y: 379.64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1511705510
@@ -21924,7 +21965,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 960, y: 0}
+  m_AnchoredPosition: {x: 960, y: 540}
   m_SizeDelta: {x: 1165.6648, y: 807.6137}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1591397278
@@ -22130,7 +22171,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 960, y: 0}
+  m_AnchoredPosition: {x: 960, y: 540}
   m_SizeDelta: {x: 1165.6648, y: 807.6137}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1611401523
@@ -22259,6 +22300,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: activate_bomb1
       objectReference: {fileID: 0}
+    - target: {fileID: 6374793629610587623, guid: 98254231ac5edc643abec7789a1774f6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6987431699574481217, guid: 98254231ac5edc643abec7789a1774f6, type: 3}
       propertyPath: tuto1
       value: 
@@ -22271,6 +22316,18 @@ PrefabInstance:
       propertyPath: tuto3
       value: 
       objectReference: {fileID: 1611401521}
+    - target: {fileID: 6987431699574481217, guid: 98254231ac5edc643abec7789a1774f6, type: 3}
+      propertyPath: bomba1
+      value: 
+      objectReference: {fileID: 816016528}
+    - target: {fileID: 6987431699574481217, guid: 98254231ac5edc643abec7789a1774f6, type: 3}
+      propertyPath: bomba2
+      value: 
+      objectReference: {fileID: 559044658}
+    - target: {fileID: 6987431699574481217, guid: 98254231ac5edc643abec7789a1774f6, type: 3}
+      propertyPath: bomba3
+      value: 
+      objectReference: {fileID: 696663076}
     - target: {fileID: 6987431699574481217, guid: 98254231ac5edc643abec7789a1774f6, type: 3}
       propertyPath: boton1
       value: 
@@ -39687,6 +39744,9 @@ MonoBehaviour:
   tuto2: {fileID: 1076431350}
   tuto3: {fileID: 1611401521}
   tipoBomba: 0
+  bomba1: {fileID: 0}
+  bomba2: {fileID: 0}
+  bomba3: {fileID: 0}
 --- !u!1 &1856585237
 GameObject:
   m_ObjectHideFlags: 0

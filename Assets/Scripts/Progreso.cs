@@ -6,6 +6,9 @@ public class Progreso : MonoBehaviour
     public SaveLoadManager saveLoadManager;
     private float saveInterval = 5f;
     private float saveTimer = 0f;
+    public bool bomba1desbloqueada = false;
+    public bool bomba2desbloqueada = false;
+    public bool bomba3desbloqueada = false;
 
     void Start()
     {
@@ -17,6 +20,9 @@ public class Progreso : MonoBehaviour
             if (data != null)
             {
                 transform.position = new Vector3(data.playerPositionX, data.playerPositionY, transform.position.z);
+                bomba1desbloqueada = data.bomba1desbloqueada;
+                bomba2desbloqueada = data.bomba2desbloqueada;
+                bomba3desbloqueada = data.bomba3desbloqueada;
             }
         }
     }
@@ -38,7 +44,10 @@ public class Progreso : MonoBehaviour
             PlayerData data = new PlayerData
             {
                 playerPositionX = transform.position.x,
-                playerPositionY = transform.position.y
+                playerPositionY = transform.position.y,
+                bomba1desbloqueada = bomba1desbloqueada,
+                bomba2desbloqueada = bomba2desbloqueada,
+                bomba3desbloqueada = bomba3desbloqueada
             };
 
             Debug.Log($"Guardando posición: X={data.playerPositionX}, Y={data.playerPositionY}");

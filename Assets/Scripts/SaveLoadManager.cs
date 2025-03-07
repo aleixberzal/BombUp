@@ -60,4 +60,7 @@ public class PlayerData
 {
     public float playerPositionX;
     public float playerPositionY;
+    public bool bomba1desbloqueada;
+    public bool bomba2desbloqueada;
+    public bool bomba3desbloqueada;
 }
