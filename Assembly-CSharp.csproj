@@ -67,15 +67,16 @@
     <Compile Include="Assets\Scripts\MenuPausa.cs" />
     <Compile Include="Assets\Scripts\ColocarBomba.cs" />
     <Compile Include="Assets\Scripts\fireworkBomb.cs" />
-    <Compile Include="Assets\AssetsAleix\primera_anim.cs" />
     <Compile Include="Assets\Scripts\bombaTiempo.cs" />
     <Compile Include="Assets\Scripts\bomb_activator.cs" />
     <Compile Include="Assets\Scripts\Progreso.cs" />
     <Compile Include="Assets\Scripts\movimientoJugador.cs" />
     <Compile Include="Assets\Scripts\TestBomba.cs" />
     <Compile Include="Assets\Scripts\MenuConfig.cs" />
+    <Compile Include="Assets\AssetsAleix\TestScripts\ParallaxEffect.cs" />
     <Compile Include="Assets\Scripts\BombaExplosion1.cs" />
     <Compile Include="Assets\Scripts\JumpCheck.cs" />
+    <Compile Include="Assets\AssetsAleix\TestScripts\primera_anim.cs" />
     <Compile Include="Assets\Scripts\tutoScript.cs" />
     <Compile Include="Assets\Scripts\ForceController.cs" />
     <Compile Include="Assets\Scripts\Explosiones.cs" />
@@ -90,7 +91,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
-    <None Include="Assets\AssetsAleix\Fog Sprite.shader" />
+    <None Include="Assets\AssetsAleix\decoration\Fog Sprite.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
