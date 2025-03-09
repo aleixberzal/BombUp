@@ -272,6 +272,9 @@ MonoBehaviour:
   tuto2: {fileID: 561775370}
   tuto3: {fileID: 2057472629}
   tipoBomba: 0
+  bomba1: {fileID: 0}
+  bomba2: {fileID: 0}
+  bomba3: {fileID: 0}
 --- !u!114 &62473990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40015,11 +40018,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2762078955552524368, guid: 64dc528b51bb76648bcae27c93fc66c6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.83
+      value: -0.08
       objectReference: {fileID: 0}
     - target: {fileID: 2762078955552524368, guid: 64dc528b51bb76648bcae27c93fc66c6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 33.95
+      value: -2.89
       objectReference: {fileID: 0}
     - target: {fileID: 2762078955552524368, guid: 64dc528b51bb76648bcae27c93fc66c6, type: 3}
       propertyPath: m_LocalPosition.z
