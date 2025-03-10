@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TestBomba : MonoBehaviour
 {
-    public BoostIndicator BoostIndicator;
 
     [SerializeField] private Explosiones explosiones;
     [SerializeField] private Color targetColor = Color.red; // Color al que cambiará el objeto
@@ -41,7 +40,6 @@ public class TestBomba : MonoBehaviour
             if (currentTime >= tiempo){
                 hasExploded = true;
                 explosiones.Explode();
-                BoostIndicator.bomb1Active = false;
             }
         }
         

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ColocarBomba : MonoBehaviour
 {
-    public BoostIndicator BoostIndicator;
 
     public GameObject bomba1;
+    public GameObject bomba2;
     public GameObject bombaPrefab1;  
     public GameObject bombaPrefab2;
     public GameObject bombaPrefab3;
@@ -86,7 +86,6 @@ public class ColocarBomba : MonoBehaviour
     {
         bomba1 = Instantiate(bombaPrefab1, firePoint.position, Quaternion.identity);
 
-        BoostIndicator.bomb1Active = true;
 
         // Aplicar velocidad al proyectil
         Rigidbody2D rb = bomba1.GetComponent<Rigidbody2D>();
@@ -100,7 +99,7 @@ public class ColocarBomba : MonoBehaviour
 
     void LanzarBomba2()
     {
-        GameObject bomba2 = Instantiate(bombaPrefab2, firePoint.position, Quaternion.identity);  // Instancia la bomba
+        bomba2 = Instantiate(bombaPrefab2, firePoint.position, Quaternion.identity);  // Instancia la bomba
 
         // Aplicar velocidad al proyectil
         Rigidbody2D rb = bomba2.GetComponent<Rigidbody2D>();
