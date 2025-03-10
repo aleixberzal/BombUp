@@ -9,6 +9,8 @@ TagManager:
   - Bomba2
   - Bomba3
   - Jugador
+  - Bomb1Collider
+  - Bomb2Collider
   layers:
   - Default
   - TransparentFX
