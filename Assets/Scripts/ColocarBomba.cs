@@ -7,6 +7,7 @@ public class ColocarBomba : MonoBehaviour
 
     public GameObject bomba1;
     public GameObject bomba2;
+    public GameObject bomba3;
     public GameObject bombaPrefab1;  
     public GameObject bombaPrefab2;
     public GameObject bombaPrefab3;
@@ -125,7 +126,7 @@ public class ColocarBomba : MonoBehaviour
         //}
 
 
-        GameObject bomba3 = Instantiate(bombaPrefab3, firePoint.position, Quaternion.identity);
+        bomba3 = Instantiate(bombaPrefab3, firePoint.position, Quaternion.identity);
 
 
         Rigidbody2D rb = bomba3.GetComponent<Rigidbody2D>();

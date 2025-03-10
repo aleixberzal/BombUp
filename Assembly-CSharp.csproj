@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{2980C836-C07A-4BE7-C5B2-69962B07E236}</ProjectGuid>
+    <ProjectGuid>{E6F78B53-70D3-C9F1-5DCA-39F41024F20B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -59,14 +59,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\RaycastSuelo.cs" />
-    <Compile Include="Assets\Scripts\detonarBomba.cs" />
+    <Compile Include="Assets\Scripts\Bomb3Ontrigger.cs" />
     <Compile Include="Assets\Scripts\BoostIndicator.cs" />
     <Compile Include="Assets\Scripts\EndGameTrigger.cs" />
     <Compile Include="Assets\Scripts\MenuPrincipal.cs" />
     <Compile Include="Assets\Scripts\SaveLoadManager.cs" />
     <Compile Include="Assets\Scripts\MenuPausa.cs" />
     <Compile Include="Assets\Scripts\ColocarBomba.cs" />
-    <Compile Include="Assets\Scripts\fireworkBomb.cs" />
     <Compile Include="Assets\Scripts\bombaTiempo.cs" />
     <Compile Include="Assets\Scripts\bomb_activator.cs" />
     <Compile Include="Assets\Scripts\Progreso.cs" />
@@ -79,6 +78,7 @@
     <Compile Include="Assets\AssetsAleix\TestScripts\primera_anim.cs" />
     <Compile Include="Assets\Scripts\tutoScript.cs" />
     <Compile Include="Assets\Scripts\ForceController.cs" />
+    <Compile Include="Assets\Scripts\FireworkBomb.cs" />
     <Compile Include="Assets\Scripts\Explosiones.cs" />
     <Compile Include="Assets\Scripts\Camara.cs" />
     <Compile Include="Assets\Scripts\camaraLenta.cs" />
@@ -763,8 +763,8 @@
     <Reference Include="UnityEngine.Purchasing.Stores">
       <HintPath>Library\ScriptAssemblies\UnityEngine.Purchasing.Stores.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.AI.Navigation">
-      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.dll</HintPath>
+    <Reference Include="Unity.Postprocessing.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
@@ -772,8 +772,8 @@
     <Reference Include="Unity.Analytics.DataPrivacy">
       <HintPath>Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
+    <Reference Include="Unity.AI.Navigation">
+      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Common.Path.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Path.Editor.dll</HintPath>
@@ -934,11 +934,11 @@
     <Reference Include="Unity.InternalAPIEditorBridge.001">
       <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.State.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.State.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics">
       <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
