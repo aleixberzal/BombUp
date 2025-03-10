@@ -28,14 +28,13 @@ public class bomb_activator : MonoBehaviour
         Debug.Log($"Bomba 1 desbloqueada: {progreso.bomba1desbloqueada}");
         Debug.Log($"Bomba 2 desbloqueada: {progreso.bomba2desbloqueada}");
         Debug.Log($"Bomba 3 desbloqueada: {progreso.bomba3desbloqueada}");
-        //bomba1.SetActive(true);
         //bomba2.SetActive(true);
         //bomba3.SetActive(true);
         if (progreso.bomba1desbloqueada == true)
         {
             bombaScript.desbloquearPrimeraBomba();
             boton1.enabled = true;
-            //bomba1.SetActive(false);
+            Destroy(bomba1);
         }
         if (progreso.bomba2desbloqueada == true)
         {

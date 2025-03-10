@@ -9,6 +9,8 @@ public class Explosiones : MonoBehaviour
     [SerializeField] ContactFilter2D contactFilter;
     [SerializeField] Collider2D[] affectedColliders = new Collider2D[25];
 
+    MainCamera cameraRef = null;
+
     public void Explode()
     {
         int numColliders = Physics2D.OverlapCircle(transform.position, radius, contactFilter, affectedColliders);
@@ -21,7 +23,10 @@ public class Explosiones : MonoBehaviour
                 {
                     Vector2 forceDirection = (rb.transform.position - transform.position).normalized;
                     rb.AddForce(forceDirection * force, ForceMode2D.Impulse);
-                    StartCoroutine(FindObjectOfType<CameraShake>().Shake(1f, 1f));
+                    if (cameraRef != null)
+                    {
+                        cameraRef.Shake(1f, 1f);
+                    }
                     Destroy(gameObject);
                 }
             }
@@ -31,6 +36,10 @@ public class Explosiones : MonoBehaviour
 // Start is called before the first frame update
 void Start()
     {
+        GameObject cam = GameObject.Find("Main Camera");
+        if(cam != null) {
+            cameraRef = cam.GetComponent<MainCamera>();
+        }
         
     }
 
