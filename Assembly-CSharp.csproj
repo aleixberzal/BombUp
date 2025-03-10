@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{E6F78B53-70D3-C9F1-5DCA-39F41024F20B}</ProjectGuid>
+    <ProjectGuid>{741B2FC3-6AE0-2166-DD46-AC44E716F58E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\SaveLoadManager.cs" />
     <Compile Include="Assets\Scripts\MenuPausa.cs" />
     <Compile Include="Assets\Scripts\ColocarBomba.cs" />
+    <Compile Include="Assets\Scripts\fireworkBomb.cs" />
     <Compile Include="Assets\Scripts\bombaTiempo.cs" />
     <Compile Include="Assets\Scripts\bomb_activator.cs" />
     <Compile Include="Assets\Scripts\Progreso.cs" />
@@ -78,7 +79,6 @@
     <Compile Include="Assets\AssetsAleix\TestScripts\primera_anim.cs" />
     <Compile Include="Assets\Scripts\tutoScript.cs" />
     <Compile Include="Assets\Scripts\ForceController.cs" />
-    <Compile Include="Assets\Scripts\FireworkBomb.cs" />
     <Compile Include="Assets\Scripts\Explosiones.cs" />
     <Compile Include="Assets\Scripts\Camara.cs" />
     <Compile Include="Assets\Scripts\camaraLenta.cs" />
