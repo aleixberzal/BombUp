@@ -33,11 +33,11 @@ public class bombaTiempo : MonoBehaviour
             // Actualizar el texto en cada ciclo de la cuenta regresiva
             if (contadorTexto != null)
             {
-                contadorTexto.text = tiempoRestante.ToString("0"); // Mostrar número entero
+                contadorTexto.text = tiempoRestante.ToString("0.0"); // Mostrar número entero
             }
 
-            yield return new WaitForSeconds(1f);
-            tiempoRestante--;
+            yield return new WaitForSeconds(0.1f);
+            tiempoRestante -= 0.1f;
         }
 
         Destroy(contadorInstanciado, 1f); // Destruir el texto después de 1 segundo
@@ -57,7 +57,7 @@ public class bombaTiempo : MonoBehaviour
             Debug.Log("Posición del contador: " + contadorInstanciado.transform.position);
 
             // Actualiza la posición del texto sobre la bomba
-            contadorInstanciado.transform.position = transform.position + Vector3.up * 1f;
+            contadorInstanciado.transform.position = transform.position + Vector3.up * 0.5f;
         }
     }
 }
