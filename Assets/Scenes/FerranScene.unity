@@ -19449,11 +19449,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2762078955552524368, guid: 64dc528b51bb76648bcae27c93fc66c6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.5131493
+      value: 3.44
       objectReference: {fileID: 0}
     - target: {fileID: 2762078955552524368, guid: 64dc528b51bb76648bcae27c93fc66c6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.2135653
+      value: -8.83
       objectReference: {fileID: 0}
     - target: {fileID: 2762078955552524368, guid: 64dc528b51bb76648bcae27c93fc66c6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -19489,15 +19489,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3487476426610464409, guid: 64dc528b51bb76648bcae27c93fc66c6, type: 3}
       propertyPath: primera_bomba
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3487476426610464409, guid: 64dc528b51bb76648bcae27c93fc66c6, type: 3}
       propertyPath: segunda_bomba
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3487476426610464409, guid: 64dc528b51bb76648bcae27c93fc66c6, type: 3}
       propertyPath: tercera_bomba
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4151496934711561475, guid: 64dc528b51bb76648bcae27c93fc66c6, type: 3}
       propertyPath: m_Enabled
@@ -20162,7 +20162,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1562803442}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.3, y: -5, z: 0}
+  m_LocalPosition: {x: 5.3, y: -5, z: 0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
