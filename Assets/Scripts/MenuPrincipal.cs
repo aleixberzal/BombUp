@@ -22,7 +22,7 @@ public class MenuPrincipal : MonoBehaviour
             File.Delete(filePath);
         }
 
-        SceneManager.LoadScene("Escena Principal");
+        SceneManager.LoadScene("EscenaPrincipal");
     }
 
     public void Salir()
@@ -43,7 +43,7 @@ public class MenuPrincipal : MonoBehaviour
     {
         if (FindObjectOfType<SaveLoadManager>().ExistePartida())
         {
-            SceneManager.LoadScene("Escena Principal");
+            SceneManager.LoadScene("EscenaPrincipal");
         }
         else
         {
