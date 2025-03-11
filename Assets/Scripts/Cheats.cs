@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TpCharacter : MonoBehaviour
+public class Cheats : MonoBehaviour
 {
     public GameObject tp1;
     public GameObject tp2;
     public GameObject tp3;
     public GameObject tp4;
+    public ColocarBomba unblock;
     void Start()
     {
         
@@ -29,6 +30,13 @@ public class TpCharacter : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F4))
         {
             transform.position = tp4.transform.position;
+        }
+
+        if (Input.GetKeyDown(KeyCode.F5))
+        {
+            unblock.desbloquearPrimeraBomba();
+            unblock.desbloquearSegundaBomba();
+            unblock.desbloquearTerceraBomba();
         }
     }
 }

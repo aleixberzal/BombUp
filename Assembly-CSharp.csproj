@@ -74,11 +74,11 @@
     <Compile Include="Assets\Scripts\camaraLenta.cs" />
     <Compile Include="Assets\Scripts\CameraShake.cs" />
     <Compile Include="Assets\dash.cs" />
+    <Compile Include="Assets\Scripts\Cheats.cs" />
     <Compile Include="Assets\Scripts\BoostIndicator.cs" />
     <Compile Include="Assets\Scripts\EndGameTrigger.cs" />
     <Compile Include="Assets\Scripts\MenuPrincipal.cs" />
     <Compile Include="Assets\Scripts\SaveLoadManager.cs" />
-    <Compile Include="Assets\Scripts\TpCharacter.cs" />
     <Compile Include="Assets\Scripts\movimientoJugador.cs" />
     <Compile Include="Assets\Scripts\TestBomba.cs" />
     <Compile Include="Assets\Scripts\JumpCheck.cs" />

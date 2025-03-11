@@ -86,15 +86,6 @@ public class ColocarBomba : MonoBehaviour
     void LanzarBomba1()
     {
         bomba1 = Instantiate(bombaPrefab1, firePoint.position, Quaternion.identity);
-
-
-        // Aplicar velocidad al proyectil
-        Rigidbody2D rb = bomba1.GetComponent<Rigidbody2D>();
-        if (rb != null)
-        {
-            rb.velocity = direccionBomba * velocidadBomba;
-        }
-
     }
 
     void LanzarBomba2()
