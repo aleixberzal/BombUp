@@ -94,7 +94,6 @@ public class ColocarBomba : MonoBehaviour
         {
             rb.velocity = direccionBomba * velocidadBomba;
         }
-        bomba1.transform.right = direccionBomba;
 
     }
 
@@ -108,7 +107,6 @@ public class ColocarBomba : MonoBehaviour
         {
             rb.velocity = direccionBomba * velocidadBomba;
         }
-        bomba2.transform.right = direccionBomba;
     }
 
 

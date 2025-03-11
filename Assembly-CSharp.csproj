@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\Bomb3Ontrigger.cs" />
     <Compile Include="Assets\Scripts\MenuPausa.cs" />
     <Compile Include="Assets\Scripts\ColocarBomba.cs" />
+    <Compile Include="Assets\Scripts\fireworkBomb.cs" />
     <Compile Include="Assets\Scripts\bombaTiempo.cs" />
     <Compile Include="Assets\Scripts\bomb_activator.cs" />
     <Compile Include="Assets\Scripts\Progreso.cs" />
@@ -70,7 +71,6 @@
     <Compile Include="Assets\Scripts\BombaExplosion1.cs" />
     <Compile Include="Assets\AssetsAleix\TestScripts\primera_anim.cs" />
     <Compile Include="Assets\Scripts\ForceController.cs" />
-    <Compile Include="Assets\Scripts\FireworkBomb.cs" />
     <Compile Include="Assets\Scripts\camaraLenta.cs" />
     <Compile Include="Assets\Scripts\CameraShake.cs" />
     <Compile Include="Assets\dash.cs" />
@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\EndGameTrigger.cs" />
     <Compile Include="Assets\Scripts\MenuPrincipal.cs" />
     <Compile Include="Assets\Scripts\SaveLoadManager.cs" />
+    <Compile Include="Assets\Scripts\TpCharacter.cs" />
     <Compile Include="Assets\Scripts\movimientoJugador.cs" />
     <Compile Include="Assets\Scripts\TestBomba.cs" />
     <Compile Include="Assets\Scripts\JumpCheck.cs" />
