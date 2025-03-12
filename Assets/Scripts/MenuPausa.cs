@@ -68,7 +68,7 @@ public class MenuPausa : MonoBehaviour
             File.Delete(filePath);
         }
 
-        SceneManager.LoadScene("FerranScene");
+        SceneManager.LoadScene("EscenaPrincipal");
     }
 
     public void AbrirConfiguracion()

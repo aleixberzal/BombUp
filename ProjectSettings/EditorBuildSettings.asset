@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Beta.unity
     guid: 0797b574157ec3f429250ba908a0e56b
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/MenuPrincipal.unity
     guid: 625d7f74753a9a743823cb69ad694d0f
   - enabled: 0
@@ -20,7 +20,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/FerranScene.unity
     guid: e7b4fd97ad678d14295fc7bd021cc4a2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/AleixScene.unity
     guid: e6ab885cb1c1bbe44bc814643833febb
+  - enabled: 1
+    path: Assets/Scenes/EscenaPrincipal.unity
+    guid: 8d8557db7f4e5674c933e98756ddc69b
   m_configObjects: {}
