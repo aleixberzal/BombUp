@@ -11,6 +11,7 @@ TagManager:
   - Jugador
   - Bomb1Collider
   - Bomb2Collider
+  - ParedBomba2
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - Techos
   - Foreground
   - Background
-  - 
+  - caca
   - 
   - 
   - 

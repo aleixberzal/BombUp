@@ -277,7 +277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 2
-  force: 9
+  force: 7
   contactFilter:
     useTriggers: 0
     useLayerMask: 0

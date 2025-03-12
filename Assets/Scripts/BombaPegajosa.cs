@@ -26,7 +26,7 @@ public class BombaPegajosa : MonoBehaviour
             BombaPegajosa bombaPegajosa = bomb2.GetComponent<BombaPegajosa>();
 
             // Si el componente existe, ejecutar la explosión
-            if (explosiones != null && bombaPegajosa != null && bombaPegajosa.pegado)
+            if (explosiones != null && bombaPegajosa != null && pegado)
             {
                 explosiones.Explode();
                 FindObjectOfType<ColocarBomba>().StartCooldownBomba2();
@@ -51,5 +51,16 @@ public class BombaPegajosa : MonoBehaviour
             float angle = Mathf.Atan2(normal.y, normal.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0, 0, angle - 90);
         }
-    } 
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!pegado && collision.gameObject.CompareTag("ParedBomba2"))
+        {
+            pegado = true;
+            rb.velocity = Vector2.zero; // Detiene el movimiento
+            rb.isKinematic = true; // Desactiva la física para que no caiga
+            rb.angularVelocity = 0f;
+
+        }
+    }
 }
