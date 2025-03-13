@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using System.IO;
+using UnityEngine.UI;
 
 public class MenuPausa : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class MenuPausa : MonoBehaviour
     public GameObject menuConfiguracion;
     private bool estaPausado = false;
     private bool enConfiguracion = false;
-    
+    public Cronometro cronometro;
 
     void Start()
     {
@@ -44,6 +45,7 @@ public class MenuPausa : MonoBehaviour
     public void Pausar()
     {
         CambiarEstadoMenus(true, false);
+        cronometro.DetenerCronometro();
         Time.timeScale = 0f;
         estaPausado = true;
     }
@@ -51,6 +53,7 @@ public class MenuPausa : MonoBehaviour
     public void Reanudar()
     {
         CambiarEstadoMenus(false, false);
+        cronometro.IniciarCronometro();
         Time.timeScale = 1f;
         estaPausado = false;
     }
@@ -68,6 +71,7 @@ public class MenuPausa : MonoBehaviour
             File.Delete(filePath);
         }
 
+        cronometro.ReiniciarCronometro();
         SceneManager.LoadScene("EscenaPrincipal");
     }
 

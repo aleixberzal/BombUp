@@ -82,6 +82,7 @@
     <Compile Include="Assets\Scripts\SaveLoadManager.cs" />
     <Compile Include="Assets\Scripts\Progress.cs" />
     <Compile Include="Assets\Scripts\movimientoJugador.cs" />
+    <Compile Include="Assets\Scripts\Cronometro.cs" />
     <Compile Include="Assets\Scripts\TestBomba.cs" />
     <Compile Include="Assets\Scripts\JumpCheck.cs" />
     <Compile Include="Assets\Scripts\tutoScript.cs" />
