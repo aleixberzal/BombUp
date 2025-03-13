@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndGameTrigger : MonoBehaviour
 {
@@ -15,12 +16,6 @@ public class EndGameTrigger : MonoBehaviour
 
     void EndGame()
     {
-        Debug.Log("Fin del juego");
-
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false; // Detiene el juego en el editor
-#else
-    Application.Quit(); // Cierra la aplicación en una build
-#endif
+        SceneManager.LoadScene("Creditos");
     }
 }
