@@ -50,4 +50,9 @@ public class MenuPrincipal : MonoBehaviour
             Debug.Log("No hay partida guardada.");
         }
     }
+
+    public void Creditos()
+    {
+        SceneManager.LoadScene("Creditos");
+    }
 }
