@@ -11,9 +11,6 @@ public class FireworkBomb : MonoBehaviour
     public bool isFlying = false;
     public bool Ontrigger = false;
 
-    private float standByTime = 0.1f;  // Tiempo en segundos
-    private float passedTime = 0f;
-
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -42,5 +39,10 @@ public class FireworkBomb : MonoBehaviour
             rb.velocity = new Vector2(0, speed);
         }
     }
-    
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        rb.isKinematic = true;
+    }
+
 }

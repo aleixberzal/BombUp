@@ -114,11 +114,7 @@ public class ColocarBomba : MonoBehaviour
         //    direccionBomba = Vector2.right; 
         //}
 
-
         bomba3 = Instantiate(bombaPrefab3, firePoint.position, Quaternion.identity);
-
-
-        Rigidbody2D rb = bomba3.GetComponent<Rigidbody2D>();
     }
 
 
