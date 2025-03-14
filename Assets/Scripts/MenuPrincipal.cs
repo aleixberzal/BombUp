@@ -22,7 +22,7 @@ public class MenuPrincipal : MonoBehaviour
             File.Delete(filePath);
         }
 
-        SceneManager.LoadScene("EscenaPrincipal");
+        SceneManager.LoadScene("FerranScene");
     }
 
     public void Salir()

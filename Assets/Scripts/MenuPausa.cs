@@ -72,7 +72,7 @@ public class MenuPausa : MonoBehaviour
         }
 
         cronometro.ReiniciarCronometro();
-        SceneManager.LoadScene("EscenaPrincipal");
+        SceneManager.LoadScene("FerranScene");
     }
 
     public void AbrirConfiguracion()

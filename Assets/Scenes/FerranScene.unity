@@ -39809,6 +39809,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cronometroTexto: {fileID: 420509659}
+  juego: 1
 --- !u!114 &1853568726
 MonoBehaviour:
   m_ObjectHideFlags: 0
