@@ -21,20 +21,25 @@ public class Explosiones : MonoBehaviour
             {
                 if (affectedColliders[i].gameObject.TryGetComponent(out Rigidbody2D rb))
                 {
+                    // Calcula la dirección de la fuerza hacia fuera de la bomba
                     Vector2 forceDirection = (rb.transform.position - transform.position).normalized;
                     rb.AddForce(forceDirection * force, ForceMode2D.Impulse);
+
+                    // Agregar efecto de sacudida de cámara si es necesario
                     if (cameraRef != null)
                     {
                         cameraRef.Shake(1f, 1f);
                     }
-                    Destroy(gameObject);
                 }
             }
+
+            // Ahora destruye el objeto después de aplicar la fuerza
+            Destroy(gameObject);
         }
     }
 
-// Start is called before the first frame update
-void Start()
+    // Start is called before the first frame update
+    void Start()
     {
         GameObject cam = GameObject.Find("Main Camera");
         if(cam != null) {
