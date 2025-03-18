@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\MenuConfig.cs" />
     <Compile Include="Assets\AssetsAleix\TestScripts\ParallaxEffect.cs" />
     <Compile Include="Assets\Scripts\BombaExplosion1.cs" />
+    <Compile Include="Assets\Scripts\BreakableFloor.cs" />
     <Compile Include="Assets\AssetsAleix\TestScripts\primera_anim.cs" />
     <Compile Include="Assets\Scripts\ForceController.cs" />
     <Compile Include="Assets\Scripts\camaraLenta.cs" />
