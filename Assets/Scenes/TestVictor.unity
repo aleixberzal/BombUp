@@ -20883,7 +20883,7 @@ GameObject:
   - component: {fileID: 775026003}
   - component: {fileID: 775026002}
   - component: {fileID: 775026001}
-  m_Layer: 3
+  m_Layer: 11
   m_Name: ParedBomba2
   m_TagString: ParedBomba2
   m_Icon: {fileID: 0}
@@ -25677,11 +25677,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2762078955552524368, guid: 64dc528b51bb76648bcae27c93fc66c6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.73
+      value: 10.23
       objectReference: {fileID: 0}
     - target: {fileID: 2762078955552524368, guid: 64dc528b51bb76648bcae27c93fc66c6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -17.08
+      value: 47.91
       objectReference: {fileID: 0}
     - target: {fileID: 2762078955552524368, guid: 64dc528b51bb76648bcae27c93fc66c6, type: 3}
       propertyPath: m_LocalPosition.z

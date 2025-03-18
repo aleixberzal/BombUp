@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\MenuConfig.cs" />
     <Compile Include="Assets\AssetsAleix\TestScripts\ParallaxEffect.cs" />
     <Compile Include="Assets\Scripts\BombaExplosion1.cs" />
+    <Compile Include="Assets\Scripts\BreakableFloor.cs" />
     <Compile Include="Assets\AssetsAleix\TestScripts\primera_anim.cs" />
     <Compile Include="Assets\Scripts\ForceController.cs" />
     <Compile Include="Assets\Scripts\camaraLenta.cs" />
@@ -80,7 +81,6 @@
     <Compile Include="Assets\Scripts\EndGameTrigger.cs" />
     <Compile Include="Assets\Scripts\MenuPrincipal.cs" />
     <Compile Include="Assets\Scripts\SaveLoadManager.cs" />
-    <Compile Include="Assets\BreakableFloor.cs" />
     <Compile Include="Assets\Scripts\Progress.cs" />
     <Compile Include="Assets\Scripts\movimientoJugador.cs" />
     <Compile Include="Assets\Scripts\Cronometro.cs" />
@@ -382,6 +382,15 @@
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
       <HintPath>Library\PackageCache\com.unity.analytics@3.8.1\AnalyticsStandardEvents\Unity.Analytics.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Android.Types">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.3f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Android.Gradle">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.3f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Gradle.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Android.GradleProject">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.3f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.GradleProject.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.3f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>

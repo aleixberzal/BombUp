@@ -24,11 +24,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9484301580135016}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.08789998, y: -0.15980005, z: -0.21497802}
+  m_LocalPosition: {x: -0.092100024, y: -0.16020012, z: -0.21497802}
   m_LocalScale: {x: 1, y: 9.227635, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8779052444627616260}
+  m_Father: {fileID: 2762078955552524368}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1824949251371018610
@@ -69,8 +69,11 @@ Transform:
   m_Children:
   - {fileID: 8779052444627616260}
   - {fileID: 4163828326993214862}
+  - {fileID: 7828770625332609278}
+  - {fileID: 4182789704730618907}
+  - {fileID: 2521025628073806132}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &7999067561683546443
 Rigidbody2D:
@@ -202,8 +205,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd8972b8b80e9dd429bea378ccfc64ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BoostIndicator: {fileID: 0}
   bomba1: {fileID: 0}
+  bomba2: {fileID: 0}
+  bomba3: {fileID: 0}
   bombaPrefab1: {fileID: 7450099582326764800, guid: 87fe70d2b5574d34f88f3cb88afb0675, type: 3}
   bombaPrefab2: {fileID: 7450099582326764800, guid: 9c1b9c45b4ecb3a4fa8895eaa471622b, type: 3}
   bombaPrefab3: {fileID: 7450099582326764800, guid: 20af497dbd6f5b6498b9c8c12bbd982f, type: 3}
@@ -281,10 +285,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 7828770625332609278}
-  - {fileID: 4182789704730618907}
-  - {fileID: 2521025628073806132}
+  m_Children: []
   m_Father: {fileID: 2762078955552524368}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -385,10 +386,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e9cd632a7106014aaa3b370c84d5ddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bomb1: {fileID: 0}
-  ColocarBomba: {fileID: 3487476426610464409}
+  colocarBomba: {fileID: 0}
   arrow1: {fileID: 0}
-  bomb1Active: 0
+  arrow2: {fileID: 0}
+  bomb1OnTrigger: 0
+  bomb2OnTrigger: 0
 --- !u!1 &7231610441066916283
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,11 +499,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8490035136019308524}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.10100001, y: -0.15980005, z: -0.21497802}
+  m_LocalPosition: {x: 0.102399945, y: -0.15979958, z: -0.21497802}
   m_LocalScale: {x: 1, y: 9.227635, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8779052444627616260}
+  m_Father: {fileID: 2762078955552524368}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9184962300184603279
@@ -528,10 +530,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9184962300184603279}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.015999973, y: -0.15980005, z: -0.21497802}
+  m_LocalPosition: {x: 0.015999973, y: -0.15980053, z: -0.21497802}
   m_LocalScale: {x: 1, y: 9.227635, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8779052444627616260}
+  m_Father: {fileID: 2762078955552524368}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

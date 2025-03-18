@@ -28,8 +28,7 @@ public class FireworkBomb : MonoBehaviour
         }
 
         if (startFlying)
-        {
-            rb.isKinematic = false;
+        {   
             if (Ontrigger)
             {
                 GameObject bomb3 = GameObject.FindGameObjectWithTag("Bomba3");
@@ -39,6 +38,10 @@ public class FireworkBomb : MonoBehaviour
             }
             rb.velocity = new Vector2(0, speed);
         }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        rb.isKinematic = true;
     }
 
 }
