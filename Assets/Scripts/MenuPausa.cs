@@ -11,12 +11,14 @@ public class MenuPausa : MonoBehaviour
     private bool estaPausado = false;
     private bool enConfiguracion = false;
     public Cronometro cronometro;
+    public GameObject tuto1;
+    public GameObject tuto2;
+    public GameObject tuto3;
 
     void Start()
     {
         menuPausa.SetActive(false);
         menuConfiguracion.SetActive(false);
-               
     }
 
     void Update()
@@ -44,10 +46,19 @@ public class MenuPausa : MonoBehaviour
 
     public void Pausar()
     {
-        CambiarEstadoMenus(true, false);
-        cronometro.DetenerCronometro();
-        Time.timeScale = 0f;
-        estaPausado = true;
+        if (!tuto1.activeInHierarchy && !tuto2.activeInHierarchy && !tuto3.activeInHierarchy)
+        {
+            CambiarEstadoMenus(true, false);
+            cronometro.DetenerCronometro();
+            Time.timeScale = 0f;
+            estaPausado = true;
+        }
+        else
+        {
+            tuto1.SetActive(false);
+            tuto2.SetActive(false);
+            tuto3.SetActive(false);
+        }
     }
 
     public void Reanudar()

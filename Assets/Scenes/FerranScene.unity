@@ -1255,6 +1255,7 @@ GameObject:
   - component: {fileID: 235976905}
   - component: {fileID: 235976904}
   - component: {fileID: 235976903}
+  - component: {fileID: 235976906}
   m_Layer: 5
   m_Name: Resumen.button
   m_TagString: Untagged
@@ -1297,10 +1298,10 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 3
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnUp: {fileID: 1263154992}
+    m_SelectOnDown: {fileID: 1263154992}
+    m_SelectOnLeft: {fileID: 967015159}
+    m_SelectOnRight: {fileID: 1511705513}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1376,6 +1377,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 235976900}
   m_CullTransparentMesh: 1
+--- !u!114 &235976906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235976900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed5e1a899956584caf02541ed62b878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fondoBoton: {fileID: 235976904}
 --- !u!1 &243793953
 GameObject:
   m_ObjectHideFlags: 0
@@ -25015,6 +25029,7 @@ GameObject:
   - component: {fileID: 288156250}
   - component: {fileID: 288156249}
   - component: {fileID: 288156248}
+  - component: {fileID: 288156251}
   m_Layer: 5
   m_Name: PausaMenu
   m_TagString: Untagged
@@ -25084,6 +25099,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -936.7327, y: -700.3511}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &288156251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288156246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1461c933d6cbe554997d7db71355298c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elementosUI:
+  - {fileID: 235976903}
+  - {fileID: 967015159}
+  - {fileID: 1511705513}
 --- !u!1001 &300567307
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29253,6 +29284,7 @@ GameObject:
   - component: {fileID: 967015161}
   - component: {fileID: 967015160}
   - component: {fileID: 967015159}
+  - component: {fileID: 967015162}
   m_Layer: 5
   m_Name: Reiniciar.button
   m_TagString: Untagged
@@ -29295,10 +29327,10 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 3
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnUp: {fileID: 1263154992}
+    m_SelectOnDown: {fileID: 1263154992}
+    m_SelectOnLeft: {fileID: 1511705513}
+    m_SelectOnRight: {fileID: 235976903}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -29374,6 +29406,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 967015156}
   m_CullTransparentMesh: 1
+--- !u!114 &967015162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967015156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed5e1a899956584caf02541ed62b878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fondoBoton: {fileID: 967015160}
 --- !u!1001 &968608645
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30854,7 +30899,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1110493202
 PrefabInstance:
@@ -32073,6 +32118,7 @@ GameObject:
   - component: {fileID: 1263154994}
   - component: {fileID: 1263154993}
   - component: {fileID: 1263154992}
+  - component: {fileID: 1263154995}
   m_Layer: 5
   m_Name: Salir.button
   m_TagString: Untagged
@@ -32115,8 +32161,8 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 3
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnUp: {fileID: 235976903}
+    m_SelectOnDown: {fileID: 1511705513}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
@@ -32194,6 +32240,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1263154989}
   m_CullTransparentMesh: 1
+--- !u!114 &1263154995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263154989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed5e1a899956584caf02541ed62b878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fondoBoton: {fileID: 1263154993}
 --- !u!1001 &1283687754
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32577,6 +32636,7 @@ GameObject:
   - component: {fileID: 1383683202}
   - component: {fileID: 1383683201}
   - component: {fileID: 1383683200}
+  - component: {fileID: 1383683203}
   m_Layer: 5
   m_Name: Volver
   m_TagString: Untagged
@@ -32698,6 +32758,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1383683197}
   m_CullTransparentMesh: 1
+--- !u!114 &1383683203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383683197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed5e1a899956584caf02541ed62b878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fondoBoton: {fileID: 1383683201}
 --- !u!1001 &1413763127
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33241,6 +33314,7 @@ GameObject:
   - component: {fileID: 1495782171}
   - component: {fileID: 1495782170}
   - component: {fileID: 1495782169}
+  - component: {fileID: 1495782172}
   m_Layer: 5
   m_Name: ConfiguracionMenu
   m_TagString: Untagged
@@ -33307,9 +33381,25 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 512}
   m_SizeDelta: {x: 983.26, y: 379.64}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1495782172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495782167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1461c933d6cbe554997d7db71355298c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elementosUI:
+  - {fileID: 1383683200}
+  - {fileID: 1100226799}
+  - {fileID: 1256408455}
 --- !u!1001 &1499604234
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33454,6 +33544,7 @@ GameObject:
   - component: {fileID: 1511705515}
   - component: {fileID: 1511705514}
   - component: {fileID: 1511705513}
+  - component: {fileID: 1511705516}
   m_Layer: 5
   m_Name: Configuracion.button
   m_TagString: Untagged
@@ -33496,10 +33587,10 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 3
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnUp: {fileID: 1263154992}
+    m_SelectOnDown: {fileID: 1263154992}
+    m_SelectOnLeft: {fileID: 235976903}
+    m_SelectOnRight: {fileID: 967015159}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -33575,6 +33666,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1511705510}
   m_CullTransparentMesh: 1
+--- !u!114 &1511705516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511705510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed5e1a899956584caf02541ed62b878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fondoBoton: {fileID: 1511705514}
 --- !u!1001 &1513852261
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52855,7 +52959,7 @@ RectTransform:
   - {fileID: 2008389674}
   - {fileID: 846594666}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -52877,6 +52981,9 @@ MonoBehaviour:
   menuPausa: {fileID: 288156246}
   menuConfiguracion: {fileID: 1495782167}
   cronometro: {fileID: 1853568725}
+  tuto1: {fileID: 1591397276}
+  tuto2: {fileID: 1076431350}
+  tuto3: {fileID: 1611401521}
 --- !u!114 &1853568723
 MonoBehaviour:
   m_ObjectHideFlags: 0
