@@ -115,6 +115,11 @@ public class ColocarBomba : MonoBehaviour
         //}
 
         bomba3 = Instantiate(bombaPrefab3, firePoint.position, Quaternion.identity);
+        Rigidbody2D rb = bomba3.GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.velocity = direccionBomba * velocidadBomba;
+        }
     }
 
 
