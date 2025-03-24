@@ -26401,15 +26401,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3487476426610464409, guid: 64dc528b51bb76648bcae27c93fc66c6, type: 3}
       propertyPath: primera_bomba
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3487476426610464409, guid: 64dc528b51bb76648bcae27c93fc66c6, type: 3}
       propertyPath: segunda_bomba
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3487476426610464409, guid: 64dc528b51bb76648bcae27c93fc66c6, type: 3}
       propertyPath: tercera_bomba
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4151496934711561475, guid: 64dc528b51bb76648bcae27c93fc66c6, type: 3}
       propertyPath: m_Color.b
