@@ -10,6 +10,7 @@ public class FireworkBomb : MonoBehaviour
     public bool startFlying = false;
     public bool isFlying = false;
     public bool Ontrigger = false;
+    public bool pegado = false;
 
     void Start()
     {
@@ -22,13 +23,16 @@ public class FireworkBomb : MonoBehaviour
 
         if ((Input.GetKeyDown(KeyCode.L) || Input.GetKeyDown(KeyCode.C)))
         {
-            startFlying = true;
-            rb.isKinematic = false;
-            GetComponent<Collider2D>().enabled = true;
+            if (pegado)
+            {
+                startFlying = true;
+                rb.isKinematic = false;
+                GetComponent<Collider2D>().enabled = true;
+            }    
         }
 
         if (startFlying)
-        {
+        {   
             if (Ontrigger)
             {
                 GameObject bomb3 = GameObject.FindGameObjectWithTag("Bomba3");
@@ -36,13 +40,24 @@ public class FireworkBomb : MonoBehaviour
 
                 explosiones.Explode();
             }
-            rb.velocity = new Vector2(0, speed);
+            Vector2 direction = transform.up;
+            rb.velocity = direction * speed;
         }
     }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        rb.isKinematic = true;
+        if (!pegado && collision.gameObject.CompareTag("Suelo"))
+        {
+            pegado = true;
+            rb.velocity = Vector2.zero; // Detiene el movimiento
+            rb.isKinematic = true; // Desactiva la física para que no caiga
+            rb.angularVelocity = 0f;
+
+            // Ajustar la rotación según la normal de la superficie
+            Vector2 normal = collision.contacts[0].normal;
+            float angle = Mathf.Atan2(normal.y, normal.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0, 0, angle - 90);
+        }
     }
 
 }

@@ -12,6 +12,7 @@ TagManager:
   - Bomb1Collider
   - Bomb2Collider
   - ParedBomba2
+  - TagBomba3
   layers:
   - Default
   - TransparentFX

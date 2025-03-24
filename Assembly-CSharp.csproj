@@ -70,12 +70,14 @@
     <Compile Include="Assets\Scripts\MenuConfig.cs" />
     <Compile Include="Assets\AssetsAleix\TestScripts\ParallaxEffect.cs" />
     <Compile Include="Assets\Scripts\BombaExplosion1.cs" />
+    <Compile Include="Assets\Scripts\BreakableFloor.cs" />
     <Compile Include="Assets\AssetsAleix\TestScripts\primera_anim.cs" />
     <Compile Include="Assets\Scripts\ForceController.cs" />
     <Compile Include="Assets\Scripts\camaraLenta.cs" />
     <Compile Include="Assets\Scripts\CameraShake.cs" />
     <Compile Include="Assets\dash.cs" />
     <Compile Include="Assets\Scripts\Cheats.cs" />
+    <Compile Include="Assets\Scripts\BotonSelector.cs" />
     <Compile Include="Assets\Scripts\BoostIndicator.cs" />
     <Compile Include="Assets\Scripts\EndGameTrigger.cs" />
     <Compile Include="Assets\Scripts\MenuPrincipal.cs" />
@@ -89,6 +91,7 @@
     <Compile Include="Assets\Scripts\Explosiones.cs" />
     <Compile Include="Assets\Scripts\Camara.cs" />
     <Compile Include="Assets\Scripts\BombaPegajosa.cs" />
+    <Compile Include="Assets\Scripts\MoverPausa.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Pixel Adventure 1\ProjectSettings\ProjectVersion.txt" />
