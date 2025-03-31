@@ -42,6 +42,7 @@ public class FireworkBomb : MonoBehaviour
             }
             Vector2 direction = transform.up;
             rb.velocity = direction * speed;
+            rb.gravityScale = 0f;
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)

@@ -185,6 +185,7 @@ GameObject:
   - component: {fileID: 2074160782057196779}
   - component: {fileID: -6153690360455363699}
   - component: {fileID: -4677150724705141011}
+  - component: {fileID: 8515110180197361424}
   m_Layer: 3
   m_Name: Bomba Basica
   m_TagString: Bomba1
@@ -438,3 +439,15 @@ MonoBehaviour:
   contadorPrefab: {fileID: 710692884408852288, guid: 77e1b64d1c528aa44b843b416e3e0fbc, type: 3}
   canvas: {fileID: 7217666250394708318}
   tiempoExplosion: 2
+--- !u!114 &8515110180197361424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7450099582326764800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a635610595061c4e91779b77c84056b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

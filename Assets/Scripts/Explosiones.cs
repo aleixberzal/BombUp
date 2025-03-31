@@ -34,10 +34,10 @@ public class Explosiones : MonoBehaviour
                     }
                 }
 
-                // Destruye plataformas con el script BreakableFloor
-                if (affectedColliders[i].gameObject.TryGetComponent(out BreakableFloor breakableFloor))
+                // Destruye plataformas con el script Breakable
+                if (affectedColliders[i].gameObject.TryGetComponent(out Breakable breakable))
                 {
-                    breakableFloor.DestroyPlatform();  // Llamamos al método de destrucción en BreakableFloor
+                    breakable.DestroyPlatform();
                 }
             }
 

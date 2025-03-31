@@ -9,6 +9,9 @@ public class Cheats : MonoBehaviour
     public GameObject tp3;
     public GameObject tp4;
     public ColocarBomba unblock;
+
+    public GameObject tpPrefab;
+    private GameObject currentTp;
     void Start()
     {
         
@@ -33,6 +36,23 @@ public class Cheats : MonoBehaviour
         }
 
         if (Input.GetKeyDown(KeyCode.F5))
+        {
+            if (currentTp != null)
+            {
+                Destroy(currentTp);
+            }
+            currentTp = Instantiate(tpPrefab, transform.position, Quaternion.identity);
+        }
+
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            if (currentTp != null)
+            {
+                transform.position = currentTp.transform.position;
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.F7))
         {
             unblock.desbloquearPrimeraBomba();
             unblock.desbloquearSegundaBomba();

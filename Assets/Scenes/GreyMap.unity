@@ -18855,7 +18855,7 @@ GameObject:
   - component: {fileID: 775026003}
   - component: {fileID: 775026002}
   - component: {fileID: 775026001}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: ParedBomba2
   m_TagString: ParedBomba2
   m_Icon: {fileID: 0}
@@ -18906,7 +18906,7 @@ TilemapCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -21247,6 +21247,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1824949251371018610, guid: 64dc528b51bb76648bcae27c93fc66c6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1508342010}
+    - targetCorrespondingSourceObject: {fileID: 1824949251371018610, guid: 64dc528b51bb76648bcae27c93fc66c6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1508342027}
   m_SourcePrefab: {fileID: 100100000, guid: 64dc528b51bb76648bcae27c93fc66c6, type: 3}
 --- !u!1 &1300634303 stripped
 GameObject:
@@ -21722,6 +21725,24 @@ MonoBehaviour:
   arrow2: {fileID: 1986048027}
   bomb1OnTrigger: 0
   bomb2OnTrigger: 0
+--- !u!114 &1508342027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508341999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c0ae7cb0ae874c40a298915c4a187bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tp1: {fileID: 0}
+  tp2: {fileID: 0}
+  tp3: {fileID: 0}
+  tp4: {fileID: 0}
+  unblock: {fileID: 1508342013}
+  tpPrefab: {fileID: 1752034305096358238, guid: 4e8ee90b5a3b5264f9a6b314b1e539cc, type: 3}
 --- !u!1 &1511705510
 GameObject:
   m_ObjectHideFlags: 0
@@ -46642,6 +46663,9 @@ MonoBehaviour:
   menuPausa: {fileID: 288156246}
   menuConfiguracion: {fileID: 1495782167}
   cronometro: {fileID: 0}
+  tuto1: {fileID: 0}
+  tuto2: {fileID: 0}
+  tuto3: {fileID: 0}
 --- !u!114 &1853568723
 MonoBehaviour:
   m_ObjectHideFlags: 0
