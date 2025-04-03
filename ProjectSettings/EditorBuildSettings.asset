@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Escena Principal.unity
     guid: 6d816c36f579d90499135462b0f75f58
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/AleixScene.unity
     guid: 3113407da4d323c449d1b420978dc9e9
   - enabled: 0
@@ -29,7 +29,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Creditos.unity
     guid: e5ed9022041291941b5c1c329a457e19
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/AlphaGreyMap.unity
     guid: 4e86704ea6ac44e419cab71d48db6d72
   m_configObjects: {}

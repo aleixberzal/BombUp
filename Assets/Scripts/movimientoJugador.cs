@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class movimientoJugador : MonoBehaviour
 {
-    public GameObject render;
+    private SpriteRenderer spriteRenderer;
     private Animator animator;
     [SerializeField] private RaycastSuelo raycast;
     private Rigidbody2D rb2D;
@@ -27,6 +27,7 @@ public class movimientoJugador : MonoBehaviour
         // Referencia al Rigidbody2D
         rb2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -60,12 +61,16 @@ public class movimientoJugador : MonoBehaviour
 
     private void AplicarFuerzaMovimiento(float direccion)
     {
+        if (movimientoHorizontal != 0 )
+        {
 
-        if (animator != null) {
-            Debug.Log("ha entrado, run");
-
-            animator.SetTrigger("runTrigger");
+            if (animator != null)
+            {
+                animator.ResetTrigger("idleTrigger");
+                animator.SetTrigger("runTrigger");
+            }
         }
+
 
         float velocidadActual = rb2D.velocity.x;
         float velocidadDeseada = direccion * movementSpeed;
@@ -104,11 +109,15 @@ public class movimientoJugador : MonoBehaviour
 
     private void DetenerMovimiento()
     {
-        if (animator != null)
+        if(movimientoHorizontal == 0 && rb2D.velocity.y == 0)
         {
-            Debug.Log("ha entrado");
-            animator.SetTrigger("iddleTrigger");
+            if (animator != null)
+            {
+                animator.ResetTrigger("runTrigger");
+                animator.SetTrigger("iddleTrigger");
+            }
         }
+       
         /*Le decimos que la velocidad de nuestro personaje horizonalmente sea 0*/
         rb2D.velocity = new Vector2(rb2D.velocity.x, rb2D.velocity.y); // Reduce velocidad gradualmente
     }
@@ -116,9 +125,7 @@ public class movimientoJugador : MonoBehaviour
     private void Girar()
     {
         mirandoDerecha = !mirandoDerecha;
-        Vector3 escala = render.transform.localScale;
-        escala.x *= -1;
-        render.transform.localScale = escala;
+        spriteRenderer.flipX = !spriteRenderer.flipX;   
 
 
     }
