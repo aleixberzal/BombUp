@@ -6,7 +6,7 @@ using UnityEngine;
 public class movimientoJugador : MonoBehaviour
 {
     public GameObject render;
-
+    private Animator animator;
     [SerializeField] private RaycastSuelo raycast;
     private Rigidbody2D rb2D;
 
@@ -26,6 +26,7 @@ public class movimientoJugador : MonoBehaviour
     {
         // Referencia al Rigidbody2D
         rb2D = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -59,6 +60,12 @@ public class movimientoJugador : MonoBehaviour
 
     private void AplicarFuerzaMovimiento(float direccion)
     {
+
+        if (animator != null) {
+            Debug.Log("ha entrado, run");
+
+            animator.SetTrigger("runTrigger");
+        }
 
         float velocidadActual = rb2D.velocity.x;
         float velocidadDeseada = direccion * movementSpeed;
@@ -97,6 +104,11 @@ public class movimientoJugador : MonoBehaviour
 
     private void DetenerMovimiento()
     {
+        if (animator != null)
+        {
+            Debug.Log("ha entrado");
+            animator.SetTrigger("iddleTrigger");
+        }
         /*Le decimos que la velocidad de nuestro personaje horizonalmente sea 0*/
         rb2D.velocity = new Vector2(rb2D.velocity.x, rb2D.velocity.y); // Reduce velocidad gradualmente
     }
