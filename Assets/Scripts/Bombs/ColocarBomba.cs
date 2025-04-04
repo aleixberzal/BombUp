@@ -16,6 +16,7 @@ public class ColocarBomba : MonoBehaviour
     public bool primera_bomba = false;
     public bool segunda_bomba = false;
     public bool tercera_bomba = false;
+    private bool mirandoDerecha;
 
     private Vector2 direccionBomba = Vector2.right;
 
@@ -32,6 +33,17 @@ public class ColocarBomba : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        float input = Input.GetAxisRaw("Horizontal");
+        if (input > 0)
+        {
+            mirandoDerecha = true;
+        }
+        else if (input < 0)
+        {
+            mirandoDerecha = false;
+        }
+
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
@@ -89,31 +101,32 @@ public class ColocarBomba : MonoBehaviour
     }
 
     void LanzarBomba2()
-    {
-        bomba2 = Instantiate(bombaPrefab2, firePoint.position, Quaternion.identity);  // Instancia la bomba
+{
+    Vector2 direccionBomba;
 
-        // Aplicar velocidad al proyectil
-        Rigidbody2D rb = bomba2.GetComponent<Rigidbody2D>();
-        if (rb != null)
-        {
-            rb.velocity = direccionBomba * velocidadBomba;
-        }
+    if (mirandoDerecha) 
+    {
+        direccionBomba = Vector2.right; 
     }
+    else 
+    {
+        direccionBomba = Vector2.left; 
+    }
+
+    bomba2 = Instantiate(bombaPrefab2, firePoint.position, Quaternion.identity);  // Instancia la bomba
+
+    // Aplicar velocidad al proyectil
+    Rigidbody2D rb = bomba2.GetComponent<Rigidbody2D>();
+    if (rb != null)
+    {
+        rb.velocity = direccionBomba * velocidadBomba;
+    }
+}
+
 
 
     void LanzarBomba3()
     {
-        //Vector2 direccionBomba;
-
-        //if (transform.localScale.x > 0) 
-        //{
-        //    direccionBomba = Vector2.left; 
-        //}
-        //else 
-        //{
-        //    direccionBomba = Vector2.right; 
-        //}
-
         bomba3 = Instantiate(bombaPrefab3, firePoint.position, Quaternion.identity);
         Rigidbody2D rb = bomba3.GetComponent<Rigidbody2D>();
         if (rb != null)
