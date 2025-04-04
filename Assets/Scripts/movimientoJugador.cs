@@ -66,7 +66,7 @@ public class movimientoJugador : MonoBehaviour
 
             if (animator != null)
             {
-                animator.ResetTrigger("idleTrigger");
+                animator.ResetTrigger("iddleTrigger");
                 animator.SetTrigger("runTrigger");
             }
         }
