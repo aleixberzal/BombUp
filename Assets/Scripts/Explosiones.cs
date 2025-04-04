@@ -9,6 +9,8 @@ public class Explosiones : MonoBehaviour
     [SerializeField] ContactFilter2D contactFilter; // Filtro de contacto para 2D
     [SerializeField] Collider2D[] affectedColliders = new Collider2D[25]; // Arreglo para almacenar los colliders afectados
 
+    public GameObject particulasPrefab;
+
     MainCamera cameraRef = null;
 
     // Método que maneja la explosión
@@ -40,7 +42,7 @@ public class Explosiones : MonoBehaviour
                     breakable.DestroyPlatform();
                 }
             }
-
+            Instantiate(particulasPrefab, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
