@@ -11,6 +11,8 @@ public class FireworkBomb : MonoBehaviour
     public bool isFlying = false;
     public bool Ontrigger = false;
     public bool pegado = false;
+    private float timeLeft = 0f;
+    private bool timeOff = false;
 
     void Start()
     {
@@ -32,7 +34,27 @@ public class FireworkBomb : MonoBehaviour
         }
 
         if (startFlying)
-        {   
+        {
+
+            timeLeft += Time.deltaTime;
+
+            // Si la bomba no explota en 5 segundos explota sola y se destruye
+            if (timeLeft >= 5f)
+            {
+                GameObject bomb3 = GameObject.FindGameObjectWithTag("Bomba3");
+                if (bomb3 != null)
+                {
+                    Explosiones explosiones = bomb3.GetComponent<Explosiones>();
+                    if (explosiones != null)
+                    {
+                        explosiones.Explode();
+                    }
+                }
+
+                timeOff = true;
+                Destroy(gameObject);
+            }
+
             if (Ontrigger)
             {
                 GameObject bomb3 = GameObject.FindGameObjectWithTag("Bomba3");
@@ -44,17 +66,20 @@ public class FireworkBomb : MonoBehaviour
             rb.velocity = direction * speed;
             rb.gravityScale = 0f;
         }
+
+       
+            
+        
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (!pegado && collision.gameObject.CompareTag("Suelo"))
         {
             pegado = true;
-            rb.velocity = Vector2.zero; // Detiene el movimiento
-            rb.isKinematic = true; // Desactiva la física para que no caiga
+            rb.velocity = Vector2.zero;
+            rb.isKinematic = true;
             rb.angularVelocity = 0f;
 
-            // Ajustar la rotación según la normal de la superficie
             Vector2 normal = collision.contacts[0].normal;
             float angle = Mathf.Atan2(normal.y, normal.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0, 0, angle - 90);
