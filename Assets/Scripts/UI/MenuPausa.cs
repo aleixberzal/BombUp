@@ -83,7 +83,7 @@ public class MenuPausa : MonoBehaviour
         }
 
         cronometro.ReiniciarCronometro();
-        SceneManager.LoadScene("FerranScene");
+        SceneManager.LoadScene("AlphaGreyMap");
     }
 
     public void AbrirConfiguracion()
