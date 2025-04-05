@@ -9,7 +9,7 @@ public class Progress : MonoBehaviour
 
     public Transform player;
     public Transform meta;
-    private float startHeight;
+    private float startHeight = -18f;
     private float finalHeight;
     private float actualHeight;
     private float progreso;
@@ -18,7 +18,6 @@ public class Progress : MonoBehaviour
     {
         if (player != null)
         {
-            startHeight = player.position.y;
             finalHeight = meta.position.y;
         }
     }
