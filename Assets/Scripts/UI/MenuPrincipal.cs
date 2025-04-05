@@ -16,7 +16,7 @@ public class MenuPrincipal : MonoBehaviour
 
     public void NuevaPartida()
     {
-        SceneManager.LoadScene("AlphaGreyMap");
+        SceneManager.LoadScene("Save UI");
     }
 
     public void Salir()

@@ -5,16 +5,28 @@ using UnityEngine.UI;
 public class BotonSelector : MonoBehaviour, ISelectHandler, IDeselectHandler
 {
     public Image fondoBoton;
+    private Color originalColor;
 
+
+    public void Start()
+    {
+        fondoBoton = GetComponent<Image>();
+        originalColor = fondoBoton.color;
+    }
     public void OnSelect(BaseEventData eventData)
     {
-        // Cambia el color al ser seleccionado
-        fondoBoton.color = Color.yellow;
+        SetAlpha(1f);
     }
 
     public void OnDeselect(BaseEventData eventData)
     {
-        // Vuelve al color original cuando se deselecciona
-        fondoBoton.color = Color.white;
+        SetAlpha(originalColor.a);
+    }
+
+    void SetAlpha(float alpha)
+    {
+        Color newColor = fondoBoton.color;
+        newColor.a = alpha;
+        fondoBoton.color = newColor;
     }
 }
