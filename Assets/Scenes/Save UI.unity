@@ -8148,7 +8148,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &310474058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14955,7 +14955,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &591482119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57738,7 +57738,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pulsa tecla "Esc" para salir
+  m_text: Press "Esc" to close
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7999500caf72587499a438ff892996c9, type: 2}
   m_sharedMaterial: {fileID: -3908993841741709278, guid: 7999500caf72587499a438ff892996c9, type: 2}
@@ -67724,7 +67724,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 922, y: 459}
+  m_AnchoredPosition: {x: 922, y: 487}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 1, y: 1}
 --- !u!4 &1413118452 stripped
@@ -81698,7 +81698,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1910797514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84322,7 +84322,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pulsa tecla "Esc" para salir
+  m_text: Press "Esc" to close
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7999500caf72587499a438ff892996c9, type: 2}
   m_sharedMaterial: {fileID: -3908993841741709278, guid: 7999500caf72587499a438ff892996c9, type: 2}
@@ -86864,7 +86864,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pulsa tecla "Esc" para salir
+  m_text: Press "Esc" to close
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7999500caf72587499a438ff892996c9, type: 2}
   m_sharedMaterial: {fileID: -3908993841741709278, guid: 7999500caf72587499a438ff892996c9, type: 2}

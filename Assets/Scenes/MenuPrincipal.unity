@@ -3660,7 +3660,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Salir
+  m_text: Quit
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7999500caf72587499a438ff892996c9, type: 2}
   m_sharedMaterial: {fileID: -3908993841741709278, guid: 7999500caf72587499a438ff892996c9, type: 2}
@@ -3795,7 +3795,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Cr\xE9ditos"
+  m_text: Credits
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7999500caf72587499a438ff892996c9, type: 2}
   m_sharedMaterial: {fileID: -3908993841741709278, guid: 7999500caf72587499a438ff892996c9, type: 2}
@@ -3930,7 +3930,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Jugar
+  m_text: Play
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7999500caf72587499a438ff892996c9, type: 2}
   m_sharedMaterial: {fileID: -3908993841741709278, guid: 7999500caf72587499a438ff892996c9, type: 2}
