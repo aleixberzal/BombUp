@@ -9,7 +9,7 @@ public class MenuConfig : MonoBehaviour
 
     void Start()
     {
-        float savedVolume = PlayerPrefs.GetFloat("volume", 0.5f);
+        float savedVolume = PlayerPrefs.GetFloat("Volume", 0.5f);
         volumeSlider.value = savedVolume;
         SetVolume(savedVolume);
     }
@@ -17,6 +17,6 @@ public class MenuConfig : MonoBehaviour
     public void SetVolume(float volume)
     {
         audioMixer.SetFloat("Volume", Mathf.Log10(Mathf.Clamp(volume, 0.0001f, 1f)) * 20f);
-        PlayerPrefs.SetFloat("volume", volume);
+        PlayerPrefs.SetFloat("Volume", volume);
     }
 }
