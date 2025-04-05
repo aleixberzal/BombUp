@@ -1,9 +1,9 @@
 using UnityEngine;
-using UnityEngine.UI; // Necesario si usas un Text UI
+using TMPro;
 
 public class Cronometro : MonoBehaviour
 {
-    public Text cronometroTexto; // Referencia al UI Text (Opcional)
+    public TMP_Text cronometroTexto;
     private float tiempoTranscurrido = 0f;
     private bool contando = true;
 

@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class Progress : MonoBehaviour
 {
@@ -13,7 +13,7 @@ public class Progress : MonoBehaviour
     private float finalHeight;
     private float actualHeight;
     private float progreso;
-    public Text progressText;
+    public TMP_Text progressText;
     void Start()
     {
         if (player != null)

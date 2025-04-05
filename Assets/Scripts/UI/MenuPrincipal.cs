@@ -16,13 +16,7 @@ public class MenuPrincipal : MonoBehaviour
 
     public void NuevaPartida()
     {
-        string filePath = Application.persistentDataPath + "/playerData.json";
-        if (File.Exists(filePath))
-        {
-            File.Delete(filePath);
-        }
-
-        SceneManager.LoadScene("FerranScene");
+        SceneManager.LoadScene("AlphaGreyMap");
     }
 
     public void Salir()
@@ -41,14 +35,7 @@ public class MenuPrincipal : MonoBehaviour
 
     public void CargarPartida()
     {
-        if (FindObjectOfType<SaveLoadManager>().ExistePartida())
-        {
-            SceneManager.LoadScene("EscenaPrincipal");
-        }
-        else
-        {
-            Debug.Log("No hay partida guardada.");
-        }
+        SceneManager.LoadScene("AlphaGreyMap");
     }
 
     public void Creditos()
