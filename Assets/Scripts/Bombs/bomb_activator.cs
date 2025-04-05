@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class bomb_activator : MonoBehaviour
 {
-    public Image boton1; 
-    public Image boton2; 
-    public Image boton3;
+    public GameObject boton1; 
+    public GameObject boton2; 
+    public GameObject boton3;
     public GameObject tuto1;
     public GameObject tuto2;
     public GameObject tuto3;
@@ -33,20 +33,20 @@ public class bomb_activator : MonoBehaviour
         if (progreso.bomba1desbloqueada == true)
         {
             bombaScript.desbloquearPrimeraBomba();
-            boton1.enabled = true;
+            boton1.SetActive(true);
             Destroy(bomba1);
         }
         if (progreso.bomba2desbloqueada == true)
         {
             bombaScript.desbloquearSegundaBomba();
-            boton2.enabled = true;
-            bomba2.SetActive(false);
+            boton2.SetActive(true);
+            Destroy(bomba2);
         }
         if (progreso.bomba3desbloqueada == true)
         {
             bombaScript.desbloquearTerceraBomba();
-            boton3.enabled = true;
-            bomba3.SetActive(false);
+            boton3.SetActive(true);
+            Destroy(bomba3);
         }
     }
 
@@ -63,19 +63,19 @@ public class bomb_activator : MonoBehaviour
                 {
                     case BombaTipo.Primera:
                         bombaScript.desbloquearPrimeraBomba();
-                        boton1.enabled = true;
+                        boton1.SetActive(true);
                         progreso.bomba1desbloqueada = true;
                         mostrarTuto1();
                         break;
                     case BombaTipo.Segunda:
                         bombaScript.desbloquearSegundaBomba();
-                        boton2.enabled = true;
+                        boton2.SetActive(true);
                         progreso.bomba2desbloqueada = true;
                         mostrarTuto2();
                         break;
                     case BombaTipo.Tercera:
                         bombaScript.desbloquearTerceraBomba();
-                        boton3.enabled = true;
+                        boton3.SetActive(true);
                         progreso.bomba3desbloqueada = true;
                         mostrarTuto3();
                         break;
