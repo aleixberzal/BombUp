@@ -17253,6 +17253,7 @@ MonoBehaviour:
   fixedX: 5.58
   fixedZ: -10
   smoothSpeed: 0.125
+  verticalOffset: 2
 --- !u!1 &559044658 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6550421997248797241, guid: adb9a1446c1af794aa38a561e0943edb, type: 3}
@@ -18611,6 +18612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cfb23b16b46ff142994aa51f60eb7ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  finishScene: {fileID: 0}
 --- !u!61 &1110055578
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18865,7 +18867,7 @@ SpriteRenderer:
   m_Size: {x: 6.35, y: 2.05}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1118718692
@@ -20218,6 +20220,7 @@ MonoBehaviour:
   tp3: {fileID: 1255781545}
   tp4: {fileID: 736688828}
   unblock: {fileID: 1508342013}
+  tpPrefab: {fileID: 0}
 --- !u!1 &1511705510
 GameObject:
   m_ObjectHideFlags: 0
@@ -39874,6 +39877,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuPausa: {fileID: 288156246}
   menuConfiguracion: {fileID: 1495782167}
+  cronometro: {fileID: 0}
+  tuto1: {fileID: 0}
+  tuto2: {fileID: 0}
+  tuto3: {fileID: 0}
 --- !u!114 &1853568723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39887,8 +39894,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 0}
-  resolutionDropdown: {fileID: 1256408455}
-  fullscreenDropdown: {fileID: 1100226799}
   volumeSlider: {fileID: 1856585238}
 --- !u!114 &1853568724
 MonoBehaviour:
@@ -39902,8 +39907,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ea793a5a371d664480fa596811e8cd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boton1: {fileID: 17885167}
-  boton2: {fileID: 1925094958}
+  boton1: {fileID: 0}
+  boton2: {fileID: 0}
   boton3: {fileID: 0}
   tuto1: {fileID: 1591397276}
   tuto2: {fileID: 1076431350}
@@ -39924,7 +39929,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3c182de46cf35b47b635b24d9cd1a1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jugador: {fileID: 0}
+  player: {fileID: 0}
+  meta: {fileID: 0}
   progressText: {fileID: 0}
 --- !u!1 &1856585237
 GameObject:
