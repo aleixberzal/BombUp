@@ -73,7 +73,7 @@ public class FireworkBomb : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (!pegado && collision.gameObject.CompareTag("Suelo"))
+        if ((!pegado && collision.gameObject.CompareTag("Suelo")) || (!pegado && collision.gameObject.CompareTag("Techo")))
         {
             pegado = true;
             rb.velocity = Vector2.zero;
@@ -85,5 +85,4 @@ public class FireworkBomb : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 0, angle - 90);
         }
     }
-
 }
