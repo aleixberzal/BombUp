@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class Explosiones : MonoBehaviour
 {
-    [SerializeField] float radius = 10f; // Radio de la explosión
-    [SerializeField] float force = 100f; // Fuerza de la explosión
-    [SerializeField] ContactFilter2D contactFilter; // Filtro de contacto para 2D
-    [SerializeField] Collider2D[] affectedColliders = new Collider2D[25]; // Arreglo para almacenar los colliders afectados
+    [SerializeField] float radius = 10f; 
+    [SerializeField] float force = 100f; 
+    [SerializeField] ContactFilter2D contactFilter; 
+    [SerializeField] Collider2D[] affectedColliders = new Collider2D[25];
+
 
     public GameObject particulasPrefab;
 
     MainCamera cameraRef = null;
 
-    // Método que maneja la explosión
     public void Explode()
     {
         int numColliders = Physics2D.OverlapCircle(transform.position, radius, contactFilter, affectedColliders);

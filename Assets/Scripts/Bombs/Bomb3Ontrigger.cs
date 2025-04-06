@@ -20,10 +20,9 @@ public class Bomb3Ontrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") || collision.CompareTag("Suelo"))
+        if (collision.CompareTag("Player") || collision.CompareTag("Suelo") || collision.CompareTag("ParedBomba2"))
         {
             fireworkBomb.Ontrigger = true;
-            aa = true;
         }
 
     }
@@ -32,7 +31,6 @@ public class Bomb3Ontrigger : MonoBehaviour
         if (collision.CompareTag("Player") || collision.CompareTag("Suelo"))
         {
             fireworkBomb.Ontrigger = false;
-            aa = false;
         }
     }
 

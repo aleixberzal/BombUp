@@ -5,17 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class EndGameTrigger : MonoBehaviour
 {
+    public FinishScene finishScene;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player")) // Verifica si el jugador ha tocado la meta
+        if (other.CompareTag("Player"))
         {
-            Debug.Log("¡Has llegado a la meta!");
-            EndGame();
+            Time.timeScale = 0f;
+            finishScene.FinishSceneMenu();
         }
-    }
-
-    void EndGame()
-    {
-        SceneManager.LoadScene("Creditos");
     }
 }

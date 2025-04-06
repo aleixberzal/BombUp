@@ -406,7 +406,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  particulasPrefab: {fileID: 2514902188791942927, guid: fceb9ce0106dc2b4983ee71ba00830dd, type: 3}
+  particulasPrefab: {fileID: 1857218664567529184, guid: fceb9ce0106dc2b4983ee71ba00830dd, type: 3}
 --- !u!114 &-6153690360455363699
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -4,7 +4,7 @@ using TMPro;
 public class Cronometro : MonoBehaviour
 {
     public TMP_Text cronometroTexto;
-    private float tiempoTranscurrido = 0f;
+    public float tiempoTranscurrido = 0f;
     private bool contando = true;
 
     void Start()
