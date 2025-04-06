@@ -39,7 +39,7 @@ public class FireworkBomb : MonoBehaviour
             timeLeft += Time.deltaTime;
 
             // Si la bomba no explota en 5 segundos explota sola y se destruye
-            if (timeLeft >= 5f)
+            if (timeLeft >= 3f)
             {
                 GameObject bomb3 = GameObject.FindGameObjectWithTag("Bomba3");
                 if (bomb3 != null)

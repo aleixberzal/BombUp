@@ -14,6 +14,9 @@ public class MenuPausa : MonoBehaviour
     public GameObject tuto1;
     public GameObject tuto2;
     public GameObject tuto3;
+    public GameObject sign1;
+    public GameObject sign2;
+    public GameObject sign3;
 
     void Start()
     {
@@ -46,7 +49,7 @@ public class MenuPausa : MonoBehaviour
 
     public void Pausar()
     {
-        if (!tuto1.activeInHierarchy && !tuto2.activeInHierarchy && !tuto3.activeInHierarchy)
+        if (!tuto1.activeInHierarchy && !tuto2.activeInHierarchy && !tuto3.activeInHierarchy && !sign1.activeInHierarchy && !sign2.activeInHierarchy && !sign3.activeInHierarchy)
         {
             CambiarEstadoMenus(true, false);
             cronometro.DetenerCronometro();
@@ -58,6 +61,9 @@ public class MenuPausa : MonoBehaviour
             tuto1.SetActive(false);
             tuto2.SetActive(false);
             tuto3.SetActive(false);
+            sign1.SetActive(false);
+            sign2.SetActive(false);
+            sign3.SetActive(false);
         }
     }
 

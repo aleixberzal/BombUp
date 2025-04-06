@@ -19,20 +19,22 @@ public class Cheats : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F1)) {
-            transform.position = tp1.transform.position;
+        if (Input.GetKeyDown(KeyCode.F1))
+        {
+            // Mantén la posición actual en Z y actualiza X, Y
+            transform.position = new Vector3(tp1.transform.position.x, tp1.transform.position.y, transform.position.z);
         }
         if (Input.GetKeyDown(KeyCode.F2))
         {
-            transform.position = tp2.transform.position;
+            transform.position = new Vector3(tp2.transform.position.x, tp2.transform.position.y, transform.position.z);
         }
         if (Input.GetKeyDown(KeyCode.F3))
         {
-            transform.position = tp3.transform.position;
+            transform.position = new Vector3(tp3.transform.position.x, tp3.transform.position.y, transform.position.z);
         }
         if (Input.GetKeyDown(KeyCode.F4))
         {
-            transform.position = tp4.transform.position;
+            transform.position = new Vector3(tp4.transform.position.x, tp4.transform.position.y, transform.position.z);
         }
 
         if (Input.GetKeyDown(KeyCode.F5))
@@ -41,14 +43,14 @@ public class Cheats : MonoBehaviour
             {
                 Destroy(currentTp);
             }
-            currentTp = Instantiate(tpPrefab, transform.position, Quaternion.identity);
+            currentTp = Instantiate(tpPrefab, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
         }
 
         if (Input.GetKeyDown(KeyCode.T))
         {
             if (currentTp != null)
             {
-                transform.position = currentTp.transform.position;
+                transform.position = new Vector3(currentTp.transform.position.x, currentTp.transform.position.y, transform.position.z);
             }
         }
 
