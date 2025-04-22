@@ -9,6 +9,8 @@ public class movimientoJugador : MonoBehaviour
     private Animator animator;
     [SerializeField] private RaycastSuelo raycast;
     private Rigidbody2D rb2D;
+    //public Transform playerTransform;
+    //private Vector3 lastPosition;
 
     [Header("Movimiento")]
     private float movimientoHorizontal = 0f;
@@ -16,7 +18,9 @@ public class movimientoJugador : MonoBehaviour
     [SerializeField] public float movementSpeed = 10f; 
     [SerializeField] public float fuerzaControl = 30f;
     [SerializeField] public float fuerzaAire = 2f;
-    [SerializeField] public bool usarSuavizado = true; 
+    [SerializeField] public bool usarSuavizado = true;
+    [SerializeField] private ParticleSystem particulas;
+    //[SerializeField] private ParticleSystem particulasAire;
     /*No funciona ahora mismo, pero es una barra para ajustar la aceleración y desaceleración*/
     [Range(0f, 1f)][SerializeField] public float smoothingFactor = 0.9f; 
 
@@ -28,12 +32,31 @@ public class movimientoJugador : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        //lastPosition = playerTransform.position;
     }
 
     private void Update()
     {
         // Detecta la entrada horizontal del jugador (-1 para izquierda, 1 para derecha)
         movimientoHorizontal = Input.GetAxisRaw("Horizontal");
+        if (raycast.enSuelo)
+        {
+            particulas.Play();
+        }
+        //else
+        //{
+        //    Vector3 movementDirection = playerTransform.position - lastPosition;
+
+        //    if (movementDirection.sqrMagnitude > 0.001f)
+        //    {
+        //        // Opcional: ignorar la altura
+        //        movementDirection.y = 0;
+
+        //        // Rota el sistema de partículas en la dirección del movimiento
+        //        particulasAire.transform.rotation = Quaternion.LookRotation(movementDirection);
+        //    }
+        //    lastPosition = playerTransform.position;
+        //}
     }
 
     private void FixedUpdate()
@@ -125,8 +148,7 @@ public class movimientoJugador : MonoBehaviour
     private void Girar()
     {
         mirandoDerecha = !mirandoDerecha;
-        spriteRenderer.flipX = !spriteRenderer.flipX;   
-
+        spriteRenderer.flipX = !spriteRenderer.flipX;
 
     }
 }
