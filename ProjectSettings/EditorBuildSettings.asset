@@ -17,10 +17,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/AleixScene.unity
     guid: 3113407da4d323c449d1b420978dc9e9
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/MenuPrincipal.unity
     guid: 625d7f74753a9a743823cb69ad694d0f
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Save UI.unity
     guid: 13c52d24d41c48f4f8a21e27502a7865
   - enabled: 0
@@ -29,10 +29,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/EscenaPrincipal.unity
     guid: 8d8557db7f4e5674c933e98756ddc69b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/AlphaGreyMap.unity
     guid: 3ee25b2c2449b074ca2b9335555cb974
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Creditos.unity
     guid: e5ed9022041291941b5c1c329a457e19
   m_configObjects: {}

@@ -89,7 +89,7 @@ public class MenuPausa : MonoBehaviour
         }
 
         cronometro.ReiniciarCronometro();
-        SceneManager.LoadScene("AlphaGreyMap");
+        SceneManager.LoadScene("Save UI");
     }
 
     public void AbrirConfiguracion()
