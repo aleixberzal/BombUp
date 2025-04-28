@@ -261,7 +261,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!50 &-5287524509348014971
 Rigidbody2D:
   serializedVersion: 4
@@ -277,7 +277,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 1
+  m_GravityScale: 0.8
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -332,7 +332,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.3}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &3478810102769823380
 MonoBehaviour:
@@ -347,8 +347,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosiones: {fileID: 2074160782057196779}
-  targetColor: {r: 1, g: 0, b: 0, a: 1}
-  changeDuration: 0.3
   tiempo: 2
   currentTime: 0
   hasExploded: 0
