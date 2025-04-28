@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class movimientoJugador : MonoBehaviour
 {
+    public bool aa;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
     [SerializeField] private RaycastSuelo raycast;
@@ -60,6 +61,7 @@ public class movimientoJugador : MonoBehaviour
     {
         if (raycast.enSuelo && movimientoHorizontal != 0)
         {
+            aa = true;
             particulas.Play();
         }
 
