@@ -39,10 +39,7 @@ public class movimientoJugador : MonoBehaviour
     {
         // Detecta la entrada horizontal del jugador (-1 para izquierda, 1 para derecha)
         movimientoHorizontal = Input.GetAxisRaw("Horizontal");
-        if (raycast.enSuelo)
-        {
-            particulas.Play();
-        }
+        
         //else
         //{
         //    Vector3 movementDirection = playerTransform.position - lastPosition;
@@ -61,11 +58,17 @@ public class movimientoJugador : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (raycast.enSuelo && movimientoHorizontal != 0)
+        {
+            particulas.Play();
+        }
+
         if (movimientoHorizontal != 0)
         {
             /*Llamamos a la función para movernos en caso de que detecte un input de movmiento horizontal*/
 
             AplicarFuerzaMovimiento(movimientoHorizontal);
+
         }
         else
         {
