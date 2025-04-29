@@ -25,6 +25,7 @@ public class MainCamera : MonoBehaviour
     void LateUpdate()
     {
         Vector3 desiredPosition = new Vector3(fixedX, player.position.y + verticalOffset, fixedZ);
+        desiredPosition.y = Mathf.Min(desiredPosition.y, 141f);
         Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
 
         if (shakeDuration > 0)
