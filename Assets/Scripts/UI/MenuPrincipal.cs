@@ -16,7 +16,7 @@ public class MenuPrincipal : MonoBehaviour
 
     public void NuevaPartida()
     {
-        SceneManager.LoadScene("Save UI");
+        SceneManager.LoadScene("Intro");
     }
 
     public void Salir()
