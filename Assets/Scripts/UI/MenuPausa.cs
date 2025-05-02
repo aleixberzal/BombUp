@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class MenuPausa : MonoBehaviour
 {
@@ -96,11 +97,13 @@ public class MenuPausa : MonoBehaviour
 
     public void AbrirConfiguracion()
     {
+        EventSystem.current.SetSelectedGameObject(null);
         CambiarEstadoMenus(false, true);
     }
 
     public void MostrarMenuPausa()
     {
+        EventSystem.current.SetSelectedGameObject(null);
         CambiarEstadoMenus(true, false);
     }
 
@@ -125,6 +128,7 @@ public class MenuPausa : MonoBehaviour
 
     public void ResetNo()
     {
+        EventSystem.current.SetSelectedGameObject(null);
         menuPausa.SetActive(true);
         menuReset.SetActive(false);
     }

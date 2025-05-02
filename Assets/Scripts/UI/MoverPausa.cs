@@ -2,9 +2,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class NavegacionMenu : MonoBehaviour
+public class MoverPausa : MonoBehaviour
 {
-    public Selectable[] elementosUI; // Asigna todos los botones, dropdowns y sliders
+    public Selectable[] elementosUI;
     private int indiceActual = 0;
     private float cooldown = 0.2f;
     private float tiempoUltimoMovimiento = 0f;
@@ -42,7 +42,6 @@ public class NavegacionMenu : MonoBehaviour
             SeleccionarElemento(indiceActual);
         }
 
-        // Si presionamos "Enter" y el elemento es un Dropdown, abrirlo automáticamente
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))
         {
             AbrirDropdownSiEsNecesario();
@@ -78,7 +77,7 @@ public class NavegacionMenu : MonoBehaviour
             Dropdown dropdown = seleccionado.GetComponent<Dropdown>();
             if (dropdown != null)
             {
-                dropdown.Show(); // Abre el dropdown al presionar Enter o Espacio
+                dropdown.Show();
             }
         }
     }
