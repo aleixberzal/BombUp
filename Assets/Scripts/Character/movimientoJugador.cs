@@ -21,6 +21,7 @@ public class movimientoJugador : MonoBehaviour
     [SerializeField] public float fuerzaAire = 2f;
     [SerializeField] public bool usarSuavizado = true;
     [SerializeField] private ParticleSystem particulas;
+    [SerializeField] private ParticleSystem mecha;
     //[SerializeField] private ParticleSystem particulasAire;
     /*No funciona ahora mismo, pero es una barra para ajustar la aceleración y desaceleración*/
     [Range(0f, 1f)][SerializeField] public float smoothingFactor = 0.9f; 
@@ -155,5 +156,8 @@ public class movimientoJugador : MonoBehaviour
         mirandoDerecha = !mirandoDerecha;
         spriteRenderer.flipX = !spriteRenderer.flipX;
 
+        Vector3 localPos = mecha.transform.localPosition;
+        localPos.x *= -1;
+        mecha.transform.localPosition = localPos;
     }
 }
