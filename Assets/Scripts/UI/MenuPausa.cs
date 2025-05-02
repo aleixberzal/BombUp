@@ -8,6 +8,7 @@ public class MenuPausa : MonoBehaviour
 {
     public GameObject menuPausa;
     public GameObject menuConfiguracion;
+    public GameObject menuReset;
     private bool estaPausado = false;
     private bool enConfiguracion = false;
     public Cronometro cronometro;
@@ -22,6 +23,7 @@ public class MenuPausa : MonoBehaviour
     {
         menuPausa.SetActive(false);
         menuConfiguracion.SetActive(false);
+        menuReset.SetActive(false);
     }
 
     void Update()
@@ -115,5 +117,15 @@ public class MenuPausa : MonoBehaviour
         enConfiguracion = mostrarConfiguracion;
     }
 
-    
+    public void ResetSeguro()
+    {
+        menuPausa.SetActive(false);
+        menuReset.SetActive(true);
+    }
+
+    public void ResetNo()
+    {
+        menuPausa.SetActive(true);
+        menuReset.SetActive(false);
+    }
 }
