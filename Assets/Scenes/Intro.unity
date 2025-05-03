@@ -5511,8 +5511,8 @@ MonoBehaviour:
   - Climb to the surface.
   - 
   - Survive. Be free.
-  charDelay: 0.05
-  linePause: 1
+  charDelay: 0.04
+  linePause: 0.5
   text: {fileID: 636192144}
   speed: 2
   minAlpha: 0.2
