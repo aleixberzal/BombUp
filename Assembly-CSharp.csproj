@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{93EC3622-33F9-9DB5-9D77-3F6919661A93}</ProjectGuid>
+    <ProjectGuid>{E6F78B53-70D3-C9F1-5DCA-39F41024F20B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -58,34 +58,41 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.3f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\RaycastSuelo.cs" />
-    <Compile Include="Assets\Scripts\Bomb3Ontrigger.cs" />
-    <Compile Include="Assets\Scripts\MenuPausa.cs" />
-    <Compile Include="Assets\Scripts\ColocarBomba.cs" />
-    <Compile Include="Assets\Scripts\fireworkBomb.cs" />
-    <Compile Include="Assets\Scripts\bombaTiempo.cs" />
-    <Compile Include="Assets\Scripts\bomb_activator.cs" />
+    <Compile Include="Assets\Scripts\UI\Cronometro.cs" />
+    <Compile Include="Assets\Scripts\Character\Cheats.cs" />
+    <Compile Include="Assets\Scripts\Sign.cs" />
+    <Compile Include="Assets\Scripts\Intro.cs" />
     <Compile Include="Assets\Scripts\Progreso.cs" />
-    <Compile Include="Assets\Scripts\MenuConfig.cs" />
+    <Compile Include="Assets\Scripts\Character\RaycastSuelo.cs" />
+    <Compile Include="Assets\Scripts\UI\Creditos.cs" />
+    <Compile Include="Assets\Scripts\UI\Progress.cs" />
+    <Compile Include="Assets\Scripts\UI\MoverPausa.cs" />
     <Compile Include="Assets\AssetsAleix\TestScripts\ParallaxEffect.cs" />
-    <Compile Include="Assets\Scripts\BombaExplosion1.cs" />
+    <Compile Include="Assets\Scripts\Bombs\Bomb3Ontrigger.cs" />
+    <Compile Include="Assets\Scripts\Bombs\BombaExplosion1.cs" />
+    <Compile Include="Assets\Scripts\Bombs\bombaTiempo.cs" />
+    <Compile Include="Assets\Scripts\Bombs\bomb_activator.cs" />
+    <Compile Include="Assets\Scripts\Camera\Camara.cs" />
     <Compile Include="Assets\AssetsAleix\TestScripts\primera_anim.cs" />
-    <Compile Include="Assets\Scripts\ForceController.cs" />
-    <Compile Include="Assets\Scripts\camaraLenta.cs" />
-    <Compile Include="Assets\Scripts\CameraShake.cs" />
-    <Compile Include="Assets\dash.cs" />
-    <Compile Include="Assets\Scripts\Cheats.cs" />
-    <Compile Include="Assets\Scripts\BoostIndicator.cs" />
-    <Compile Include="Assets\Scripts\EndGameTrigger.cs" />
-    <Compile Include="Assets\Scripts\MenuPrincipal.cs" />
+    <Compile Include="Assets\Scripts\Camera\camaraLenta.cs" />
+    <Compile Include="Assets\Scripts\UI\MenuPrincipal.cs" />
+    <Compile Include="Assets\Scripts\Character\JumpCheck.cs" />
+    <Compile Include="Assets\Scripts\Bombs\BombaPegajosa.cs" />
+    <Compile Include="Assets\Scripts\UI\BotonSelector.cs" />
+    <Compile Include="Assets\Scripts\Bombs\fireworkBomb.cs" />
     <Compile Include="Assets\Scripts\SaveLoadManager.cs" />
-    <Compile Include="Assets\Scripts\movimientoJugador.cs" />
-    <Compile Include="Assets\Scripts\TestBomba.cs" />
-    <Compile Include="Assets\Scripts\JumpCheck.cs" />
-    <Compile Include="Assets\Scripts\tutoScript.cs" />
-    <Compile Include="Assets\Scripts\Explosiones.cs" />
-    <Compile Include="Assets\Scripts\Camara.cs" />
-    <Compile Include="Assets\Scripts\BombaPegajosa.cs" />
+    <Compile Include="Assets\Scripts\Bombs\Explosiones.cs" />
+    <Compile Include="Assets\Scripts\UI\MenuConfig.cs" />
+    <Compile Include="Assets\Scripts\Character\ForceController.cs" />
+    <Compile Include="Assets\Scripts\Bombs\Breakable.cs" />
+    <Compile Include="Assets\Scripts\Character\movimientoJugador.cs" />
+    <Compile Include="Assets\Scripts\UI\FinishScene.cs" />
+    <Compile Include="Assets\Scripts\Bombs\TestBomba.cs" />
+    <Compile Include="Assets\Scripts\Bombs\ColocarBomba.cs" />
+    <Compile Include="Assets\Scripts\UI\EndGameTrigger.cs" />
+    <Compile Include="Assets\Scripts\Camera\CameraShake.cs" />
+    <Compile Include="Assets\Scripts\UI\MenuPausa.cs" />
+    <Compile Include="Assets\Scripts\Character\BoostIndicator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Pixel Adventure 1\ProjectSettings\ProjectVersion.txt" />
