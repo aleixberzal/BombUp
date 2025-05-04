@@ -5005,7 +5005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65ea139fb0beea249b861250e6524890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0.4
+  radius: 0.6
   force: 9
   contactFilter:
     useTriggers: 0
