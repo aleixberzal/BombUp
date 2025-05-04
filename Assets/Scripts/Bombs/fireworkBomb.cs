@@ -13,6 +13,7 @@ public class FireworkBomb : MonoBehaviour
     public bool pegado = false;
     private float timeLeft = 0f;
     private bool timeOff = false;
+    [SerializeField] public ParticleSystem fuego;
 
     void Start()
     {
@@ -29,6 +30,7 @@ public class FireworkBomb : MonoBehaviour
             {
                 startFlying = true;
                 rb.isKinematic = false;
+                fuego.Play();
                 GetComponent<Collider2D>().enabled = true;
             }    
         }
