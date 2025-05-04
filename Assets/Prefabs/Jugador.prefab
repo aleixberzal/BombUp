@@ -73,7 +73,7 @@ Transform:
   - {fileID: 4182789704730618907}
   - {fileID: 2521025628073806132}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &7999067561683546443
 Rigidbody2D:
@@ -134,7 +134,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0052731037, y: -0.02784495}
+  m_Offset: {x: 0.0052731037, y: -0.029571675}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -145,7 +145,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.19331408, y: 0.2643101}
+  m_Size: {x: 0.19331408, y: 0.26776356}
   m_EdgeRadius: 0
 --- !u!114 &8039938427895108538
 MonoBehaviour:
@@ -159,12 +159,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b92d41ca128ffef44acb3eb78f7af6f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  render: {fileID: 2555954303991264540}
+  aa: 0
   raycast: {fileID: 3674686614808632953}
   movementSpeed: 3
   fuerzaControl: 30
   fuerzaAire: 0.25
   usarSuavizado: 0
+  particulas: {fileID: 0}
+  mecha: {fileID: 0}
   smoothingFactor: 0
 --- !u!114 &8626409622190242246
 MonoBehaviour:
