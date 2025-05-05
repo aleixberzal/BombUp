@@ -12,6 +12,7 @@ public class MenuPausa : MonoBehaviour
     public GameObject menuReset;
     private bool estaPausado = false;
     private bool enConfiguracion = false;
+    private bool enReset = false;
     public Cronometro cronometro;
     public GameObject tuto1;
     public GameObject tuto2;
@@ -30,8 +31,9 @@ public class MenuPausa : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (enConfiguracion)
+            if (enConfiguracion || enReset)
             {
+                menuReset.SetActive(false);
                 MostrarMenuPausa();
             }
             else
@@ -120,6 +122,7 @@ public class MenuPausa : MonoBehaviour
 
     public void ResetSeguro()
     {
+        enReset = true;
         menuPausa.SetActive(false);
         menuReset.SetActive(true);
     }
