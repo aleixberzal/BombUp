@@ -11,6 +11,8 @@ public class MenuPrincipal : MonoBehaviour
 
     void Start()
     {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         menuConfiguracion.SetActive(false);
     }
 
