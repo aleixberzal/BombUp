@@ -31,7 +31,7 @@ public class Intro : MonoBehaviour
 
     void Update()
     {
-        if (finished && Input.anyKeyDown)
+        if (Input.anyKeyDown)
         {
             SceneManager.LoadScene("Save UI");
         }
