@@ -70,6 +70,7 @@
     <Compile Include="Assets\AssetsAleix\TestScripts\ParallaxEffect.cs" />
     <Compile Include="Assets\Scripts\Bombs\Bomb3Ontrigger.cs" />
     <Compile Include="Assets\Scripts\Bombs\BombaExplosion1.cs" />
+    <Compile Include="Assets\Scripts\UI\menuAudio.cs" />
     <Compile Include="Assets\Scripts\Bombs\bombaTiempo.cs" />
     <Compile Include="Assets\Scripts\Bombs\bomb_activator.cs" />
     <Compile Include="Assets\Scripts\Camera\Camara.cs" />
