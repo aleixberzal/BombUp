@@ -10,6 +10,7 @@ public class MenuPausa : MonoBehaviour
     public GameObject menuPausa;
     public GameObject menuConfiguracion;
     public GameObject menuReset;
+    public GameObject menuAudio;
     private bool estaPausado = false;
     private bool enConfiguracion = false;
     private bool enReset = false;
@@ -132,5 +133,11 @@ public class MenuPausa : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(null);
         menuPausa.SetActive(true);
         menuReset.SetActive(false);
+    }
+
+    public void AbrirAudio()
+    {
+        menuConfiguracion.SetActive(false);
+        menuAudio.SetActive(true);
     }
 }
