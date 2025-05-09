@@ -1,15 +1,21 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class Cronometro : MonoBehaviour
 {
     public TMP_Text cronometroTexto;
+    public TMP_InputField inputNombre;
+    //public GameObject panelGuardarNombre;
+    public Button botonGuardar;
     public float tiempoTranscurrido = 0f;
     private bool contando = true;
 
     void Start()
     {
         IniciarCronometro();
+        //panelGuardarNombre.SetActive(false);
+        botonGuardar.onClick.AddListener(GuardarTiempoConNombre);
     }
 
     void Update()
@@ -36,6 +42,19 @@ public class Cronometro : MonoBehaviour
     public void DetenerCronometro()
     {
         contando = false;
+        //panelGuardarNombre.SetActive(true);
+    }
+
+    public void GuardarTiempoConNombre()
+    {
+        string nombre = inputNombre.text;
+        if (string.IsNullOrEmpty(nombre)) nombre = "Jugador";
+
+        Ranking ranking = Ranking.Cargar();
+        ranking.AgregarTiempo(nombre, tiempoTranscurrido);
+        ranking.Guardar();
+
+        //panelGuardarNombre.SetActive(false);
     }
 
     public void ReiniciarCronometro()

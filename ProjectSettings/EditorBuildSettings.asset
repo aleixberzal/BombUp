@@ -32,6 +32,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Creditos.unity
     guid: e5ed9022041291941b5c1c329a457e19
+  - enabled: 1
+    path: Assets/Scenes/Ranking.unity
+    guid: 37b78edc92b7fc84db9bad175c4c85e6
   - enabled: 0
     path: Assets/Scenes/FerranScene.unity
     guid: e7b4fd97ad678d14295fc7bd021cc4a2

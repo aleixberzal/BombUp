@@ -14,6 +14,7 @@ public class MenuPrincipal : MonoBehaviour
     public Button miBoton2;
     public Button miBoton3;
     public Button miBoton4;
+    public Button miBoton5;
 
     void Start()
     {
@@ -39,6 +40,7 @@ public class MenuPrincipal : MonoBehaviour
         miBoton2.interactable = false;
         miBoton3.interactable = false;
         miBoton4.interactable = false;
+        miBoton5.interactable = false;
     }
     public void CerrarConfiguracion()
     {
@@ -47,6 +49,7 @@ public class MenuPrincipal : MonoBehaviour
         miBoton2.interactable = true;
         miBoton3.interactable = true;
         miBoton4.interactable = true;
+        miBoton5.interactable = true;
     }
 
     public void CargarPartida()
@@ -62,5 +65,10 @@ public class MenuPrincipal : MonoBehaviour
     public void AbrirAudio()
     {
         menuAudio.SetActive(true);
+    }
+
+    public void AbrirRanking()
+    {
+        SceneManager.LoadScene("Ranking");
     }
 }
