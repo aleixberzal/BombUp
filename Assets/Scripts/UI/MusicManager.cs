@@ -38,7 +38,7 @@ public class MusicManager : MonoBehaviour
     {
         Debug.Log("Escena cargada: " + scene.name);
 
-        if (scene.name == "Save UI")
+        if (scene.name == "Save UI" || scene.name == "Challenge")
         {
             if (audioSource.clip != gameMusic)
             {

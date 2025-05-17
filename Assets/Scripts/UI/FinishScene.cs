@@ -11,6 +11,9 @@ public class FinishScene : MonoBehaviour
     public GameObject finishSceneUI;
     public AudioSource audioSource;
 
+    public bool challengeDefeat = false;
+    public string textProgress = "";
+
     void Start()
     {
         scoreText.text = "";
@@ -23,10 +26,16 @@ public class FinishScene : MonoBehaviour
         if (audioSource != null)
             audioSource.Stop();
 
-        int minutes = Mathf.FloorToInt(cronometro.tiempoTranscurrido / 60f);
-        int seconds = Mathf.FloorToInt(cronometro.tiempoTranscurrido % 60f);
+        if (challengeDefeat)
+        {
+            scoreText.text = "Congratulations! You reached " + textProgress + " in 5 minutes!";
+        } else
+        {
+            int minutes = Mathf.FloorToInt(cronometro.tiempoTranscurrido / 60f);
+            int seconds = Mathf.FloorToInt(cronometro.tiempoTranscurrido % 60f);
 
-        scoreText.text = "You finished the game in: " + minutes.ToString("00") + ":" + seconds.ToString("00");
+            scoreText.text = "You finished the game in: " + minutes.ToString("00") + ":" + seconds.ToString("00");
+        }
     }
 
     public void Creditos()

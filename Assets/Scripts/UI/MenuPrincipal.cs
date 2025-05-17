@@ -28,6 +28,11 @@ public class MenuPrincipal : MonoBehaviour
         SceneManager.LoadScene("Intro");
     }
 
+    public void Challenge()
+    {
+        SceneManager.LoadScene("Challenge");
+    }
+
     public void Salir()
     {
         Application.Quit();
