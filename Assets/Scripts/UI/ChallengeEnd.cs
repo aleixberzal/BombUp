@@ -26,7 +26,7 @@ public class ChallengeEnd : MonoBehaviour
     private void Update()
     {
 
-        if (!gameEnded && finishScene.cronometro.tiempoTranscurrido >= 300f)
+        if (!gameEnded && finishScene.cronometro.tiempoTranscurrido >= 20f)
         {
             EndGame();
         }
