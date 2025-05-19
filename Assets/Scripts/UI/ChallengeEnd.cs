@@ -14,7 +14,7 @@ public class ChallengeEnd : MonoBehaviour
     public TextMeshProUGUI cronometro;
     public TextMeshProUGUI progreso;
     public float fadeSpeed = 1f;
-
+    
     private bool isFading = false;
     private bool isFading2 = false;
     private float alpha = 0f;
@@ -25,8 +25,8 @@ public class ChallengeEnd : MonoBehaviour
 
     private void Update()
     {
-
-        if (!gameEnded && finishScene.cronometro.tiempoTranscurrido >= 20f)
+        
+        if (!gameEnded && finishScene.cronometro.tiempoRestante <= 0)
         {
             EndGame();
         }

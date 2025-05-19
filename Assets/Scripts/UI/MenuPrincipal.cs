@@ -70,6 +70,7 @@ public class MenuPrincipal : MonoBehaviour
     public void AbrirAudio()
     {
         menuAudio.SetActive(true);
+        menuConfiguracion.SetActive(false);
     }
 
     public void AbrirRanking()

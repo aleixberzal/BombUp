@@ -28,7 +28,7 @@ public class FinishScene : MonoBehaviour
 
         if (challengeDefeat)
         {
-            scoreText.text = "Congratulations! You reached " + textProgress + " in 5 minutes!";
+            scoreText.text = "Congratulations!\n You reached " + textProgress + " in 5 minutes!";
         } else
         {
             int minutes = Mathf.FloorToInt(cronometro.tiempoTranscurrido / 60f);
