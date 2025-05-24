@@ -4898,6 +4898,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8229767701508589963}
   - component: {fileID: 1778933437809082723}
+  - component: {fileID: 1787451391041819038}
   m_Layer: 0
   m_Name: AudioBomba
   m_TagString: Untagged
@@ -4929,7 +4930,7 @@ AudioSource:
   m_GameObject: {fileID: 7398814200875496439}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: ec76e9a21998d0b4192745b68ed6b1e6, type: 2}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 70e8131e4ee48c543b3d818cf0aee0dd, type: 2}
   m_audioClip: {fileID: 8300000, guid: 9c6855c60aeae9046a57def213ba265a, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
@@ -4940,8 +4941,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 3
+  MaxDistance: 3.5
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -4976,7 +4977,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -5016,6 +5017,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1787451391041819038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7398814200875496439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1228381f5cbf0a841b5e2f79ff74a297, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8535467441028904656
 PrefabInstance:
   m_ObjectHideFlags: 0
