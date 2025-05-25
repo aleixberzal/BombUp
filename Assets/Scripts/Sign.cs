@@ -9,10 +9,11 @@ public class Sign : MonoBehaviour
     private bool jugadorCerca = false;  
     private bool signActivada = false;
     public GameObject turorial;
+    private AudioSource audioSource;
 
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>(); 
     }
 
     // Update is called once per frame
@@ -24,6 +25,7 @@ public class Sign : MonoBehaviour
         if (jugadorCerca && Input.GetKeyDown(KeyCode.E))
         {
             signActivada = true;
+            audioSource.Play();
             turorial.SetActive(true);
             mensajeUI.SetActive(false);
         }

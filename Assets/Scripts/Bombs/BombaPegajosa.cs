@@ -7,10 +7,13 @@ public class BombaPegajosa : MonoBehaviour
     private Rigidbody2D rb;
     public bool pegado = false;
     public string tagBomb2 = "Bomba2";
+    private AudioSource audioSource;
+    public AudioClip sticky;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -42,6 +45,8 @@ public class BombaPegajosa : MonoBehaviour
         if (!pegado && collision.gameObject.CompareTag("Suelo"))
         {
             pegado = true;
+            audioSource.clip = sticky;
+            audioSource.Play();
             rb.velocity = Vector2.zero; // Detiene el movimiento
             rb.isKinematic = true; // Desactiva la física para que no caiga
             rb.angularVelocity = 0f;

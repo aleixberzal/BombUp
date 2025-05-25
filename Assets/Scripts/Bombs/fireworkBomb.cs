@@ -13,11 +13,14 @@ public class FireworkBomb : MonoBehaviour
     public bool pegado = false;
     private float timeLeft = 0f;
     private bool timeOff = false;
+    private AudioSource fireworkSound;
     [SerializeField] public ParticleSystem fuego;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        fireworkSound = GetComponent<AudioSource>();
+
     }
 
     void Update()
@@ -32,6 +35,9 @@ public class FireworkBomb : MonoBehaviour
                 rb.isKinematic = false;
                 fuego.Play();
                 GetComponent<Collider2D>().enabled = true;
+
+                if (!fireworkSound.isPlaying)
+                    fireworkSound.Play();
             }    
         }
 

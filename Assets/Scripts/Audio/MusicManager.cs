@@ -6,6 +6,7 @@ public class MusicManager : MonoBehaviour
     public static MusicManager Instance;
     public AudioClip menuMusic;
     public AudioClip gameMusic;
+    public AudioClip endGameMusic;
     public AudioSource audioSource;
 
     void Awake()
@@ -48,4 +49,15 @@ public class MusicManager : MonoBehaviour
             }
         }
     }
+
+    public void PlayEndGameMusic()
+    {
+        if (audioSource.clip != endGameMusic)
+        {
+            audioSource.volume = 0.2f;
+            audioSource.clip = endGameMusic;
+            audioSource.Play();
+        }
+    }
+
 }

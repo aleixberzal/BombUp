@@ -10,6 +10,9 @@ public class movimientoJugador : MonoBehaviour
     private Animator animator;
     [SerializeField] private RaycastSuelo raycast;
     private Rigidbody2D rb2D;
+    private AudioSource audioSource;
+    private bool onAir = false;
+    public AudioClip fall;
     //public Transform playerTransform;
     //private Vector3 lastPosition;
 
@@ -34,6 +37,7 @@ public class movimientoJugador : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
         //lastPosition = playerTransform.position;
     }
 
@@ -86,6 +90,13 @@ public class movimientoJugador : MonoBehaviour
             /*No funcional*/
             //AplicarSuavizado();
         }
+
+        if (raycast.enSuelo && onAir)
+        {
+            audioSource.clip = fall;
+            audioSource.Play();
+        }
+        onAir = !raycast.enSuelo;
     }
 
     private void AplicarFuerzaMovimiento(float direccion)

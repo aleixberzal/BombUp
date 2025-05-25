@@ -25,9 +25,12 @@ public class ColocarBomba : MonoBehaviour
     public float cooldownBomba2 = 0.2f;
     public float cooldownBomb3 = 0.2f;
 
+    private AudioSource audioSource;
+    public AudioClip unblock;
+
     void Start()
     {
-        
+       audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -139,16 +142,22 @@ public class ColocarBomba : MonoBehaviour
     public void desbloquearPrimeraBomba()
     {
         primera_bomba = true;
+        audioSource.clip = unblock;
+        audioSource.Play();
     }
 
     public void desbloquearSegundaBomba()
     {
         segunda_bomba = true;
+        audioSource.clip = unblock;
+        audioSource.Play();
     }
 
     public void desbloquearTerceraBomba()
     {
         tercera_bomba = true;
+        audioSource.clip = unblock;
+        audioSource.Play();
     }
 
 

@@ -57,6 +57,11 @@ public class EndGameTrigger : MonoBehaviour
             cronometro.gameObject.SetActive(false);
             Time.timeScale = 0f;
             isFading = true;
+
+            if (MusicManager.Instance != null)
+            {
+                MusicManager.Instance.PlayEndGameMusic();
+            }
         }
     }
 }
